@@ -1,5 +1,9 @@
-# car2024
-项目汇总
+# 项目汇总
+
+
+采用OPENMV+CH573+超声波检测；当超声波探测车牌距离小于15cm时候将openmv识别到的数据传输mesh网络  
+将openmv与573连接完毕后，运行 EVT/EXAM/BLE/MESH/adv_vendor-test7/adv_vendor.wvproj
+
 ## OPENMV
 ### openmvuart端口  
 
@@ -9,7 +13,7 @@ openmv与CH573进行数据传输
   CH543使用uart0端口：  TX-PB7 ;RX-PB4  
   如图（CH573）  
   <div align=center>
-  <img src="https://github.com/goodxiaoma/CAR/blob/main/%E5%AE%9E%E7%89%A9%E5%9B%BE/CH573.JPG" width="200"> 
+  <img src="https://github.com/goodxiaoma/gitcarplate24/blob/main/%E5%AE%9E%E7%89%A9%E5%9B%BE/391f2266ab31f367d303541c73024d8.jpg" width="200"> 
   </div>
   
 ### openmv识别代码
