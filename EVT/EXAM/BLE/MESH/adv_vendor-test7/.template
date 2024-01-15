@@ -1,0 +1,12 @@
+
+Vendor=WCH
+MCU=CH573X
+Mcu Type=CH57x
+Link=WCH-Link
+Address=0x00000000
+Target Path=obj\adv_vendor.hex
+Erase All=true
+Program=true
+Verify=true
+Reset=true
+CLKSpeed=1

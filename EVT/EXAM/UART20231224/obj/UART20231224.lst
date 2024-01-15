@@ -1,0 +1,2621 @@
+
+UART20231224.elf:     file format elf32-littleriscv
+UART20231224.elf
+architecture: riscv:rv32, flags 0x00000112:
+EXEC_P, HAS_SYMS, D_PAGED
+start address 0x00000000
+
+Program Header:
+    LOAD off    0x00001000 vaddr 0x00000000 paddr 0x00000000 align 2**12
+         filesz 0x00000004 memsz 0x00000004 flags r-x
+    LOAD off    0x00001800 vaddr 0x20003800 paddr 0x00000004 align 2**12
+         filesz 0x000007dc memsz 0x000007dc flags r-x
+    LOAD off    0x000027e0 vaddr 0x000007e0 paddr 0x000007e0 align 2**12
+         filesz 0x00000758 memsz 0x00000758 flags r-x
+    LOAD off    0x00002fdc vaddr 0x20003fdc paddr 0x00000f38 align 2**12
+         filesz 0x00000000 memsz 0x00000024 flags rw-
+    LOAD off    0x00003000 vaddr 0x20004000 paddr 0x00000f38 align 2**12
+         filesz 0x00000018 memsz 0x00000054 flags rw-
+
+Sections:
+Idx Name            Size      VMA       LMA       File off  Algn  Flags
+  0 .init           00000004  00000000  00000000  00001000  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .highcodelalign 00000000  00000004  00000004  00003018  2**0  CONTENTS
+  2 .highcode       000007dc  20003800  00000004  00001800  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  3 .text           00000758  000007e0  000007e0  000027e0  2**2  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  4 .fini           00000000  00000f38  00000f38  00003018  2**0  CONTENTS, ALLOC, LOAD, CODE
+  5 .dalign         00000024  20003fdc  00000f38  00002fdc  2**0  ALLOC
+  6 .dlalign        00000000  00000f38  00000f38  00003018  2**0  CONTENTS
+  7 .data           00000018  20004000  00000f38  00003000  2**2  CONTENTS, ALLOC, LOAD, DATA
+  8 .bss            0000003c  20004018  00000f50  00003018  2**2  ALLOC
+  9 .stack          00000000  20008000  20008000  00003018  2**0  CONTENTS
+ 10 .debug_info     00005c09  00000000  00000000  00003018  2**0  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_abbrev   0000108a  00000000  00000000  00008c21  2**0  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_loc      000009f9  00000000  00000000  00009cab  2**0  CONTENTS, READONLY, DEBUGGING
+ 13 .debug_aranges  000001f8  00000000  00000000  0000a6a8  2**3  CONTENTS, READONLY, DEBUGGING
+ 14 .debug_ranges   000001c0  00000000  00000000  0000a8a0  2**3  CONTENTS, READONLY, DEBUGGING
+ 15 .debug_line     00002f19  00000000  00000000  0000aa60  2**0  CONTENTS, READONLY, DEBUGGING
+ 16 .debug_str      0000106e  00000000  00000000  0000d979  2**0  CONTENTS, READONLY, DEBUGGING
+ 17 .comment        00000033  00000000  00000000  0000e9e7  2**0  CONTENTS, READONLY
+ 18 .debug_frame    0000035c  00000000  00000000  0000ea1c  2**2  CONTENTS, READONLY, DEBUGGING
+SYMBOL TABLE:
+00000000 l    d  .init	00000000 .init
+00000004 l    d  .highcodelalign	00000000 .highcodelalign
+20003800 l    d  .highcode	00000000 .highcode
+000007e0 l    d  .text	00000000 .text
+00000f38 l    d  .fini	00000000 .fini
+20003fdc l    d  .dalign	00000000 .dalign
+00000f38 l    d  .dlalign	00000000 .dlalign
+20004000 l    d  .data	00000000 .data
+20004018 l    d  .bss	00000000 .bss
+20008000 l    d  .stack	00000000 .stack
+00000000 l    d  .debug_info	00000000 .debug_info
+00000000 l    d  .debug_abbrev	00000000 .debug_abbrev
+00000000 l    d  .debug_loc	00000000 .debug_loc
+00000000 l    d  .debug_aranges	00000000 .debug_aranges
+00000000 l    d  .debug_ranges	00000000 .debug_ranges
+00000000 l    d  .debug_line	00000000 .debug_line
+00000000 l    d  .debug_str	00000000 .debug_str
+00000000 l    d  .comment	00000000 .comment
+00000000 l    d  .debug_frame	00000000 .debug_frame
+00000000 l    df *ABS*	00000000 ./Startup/startup_CH573.o
+20003800 l       .highcode	00000000 _vector_base
+00000000 l    df *ABS*	00000000 Main.c
+00000000 l    df *ABS*	00000000 CH57x_sys.c
+00000000 l    df *ABS*	00000000 ISP573.c
+20003bfe l       .highcode	00000000 .loop18
+20003c0c l       .highcode	00000000 .loop29
+20003c1a l       .highcode	00000000 .loop40
+20003e9a l       .highcode	00000000 .loop401
+00000000 l    df *ABS*	00000000 openmv.c
+00000000 l    df *ABS*	00000000 CH57x_gpio.c
+00000000 l    df *ABS*	00000000 CH57x_uart0.c
+00000000 l    df *ABS*	00000000 CH57x_uart1.c
+00000000 l    df *ABS*	00000000 memcpy.c
+00000e32 g     F .text	00000028 UART1_SendString
+20003c1a g     F .highcode	0000000e FLASH_ROM_OUT
+00000d20 g     F .text	0000001a UART0_ByteTrigCfg
+20004818 g       .data	00000000 __global_pointer$
+20003bb6 g     F .highcode	0000000e mDelayuS
+20003b78  w    F .highcode	0000003e HardFault_Handler
+2000389c  w      .highcode	00000000 GPIOB_IRQHandler
+00000cbe g     F .text	00000030 UART0_BaudRateCfg
+00000d64 g     F .text	00000028 UART0_SendString
+2000389a  w      .highcode	00000000 GPIOA_IRQHandler
+20003894  w      .highcode	00000000 SysTick_Handler
+20003890  w      .highcode	00000000 NMI_Handler
+20003a2c g     F .highcode	00000018 UART1_IRQHandler
+20004018 g       .bss	00000000 _sbss
+20003c0c g     F .highcode	0000000e FLASH_ROM_IN
+20004048 g     O .bss	00000009 openmvdata
+200038bc g     F .highcode	00000170 UART0_IRQHandler
+00000e5a g     F .text	000000b6 memcpy
+20004018 g     O .bss	00000003 platefirstmark
+20004025 g     O .bss	00000001 sumb
+20004000 g     O .data	00000016 plate_false
+00000e08 g     F .text	0000002a UART1_INTCfg
+00000004 g       .init	00000000 _einit
+200038a0  w      .highcode	00000000 BB_IRQHandler
+20003ca8 g     F .highcode	00000332 FLASH_EEPROM_CMD
+00000bd6 g     F .text	000000a6 GPIOB_ModeCfg
+00000dee g     F .text	0000001a UART1_ByteTrigCfg
+20003898  w      .highcode	00000000 TMR0_IRQHandler
+20003bec g     F .highcode	00000012 FLASH_ROM_BEG
+20003bc4 g     F .highcode	00000028 mDelaymS
+20003c28 g     F .highcode	00000048 FLASH_ROM_ADDR
+20004023 g     O .bss	00000001 state
+200038ae  w      .highcode	00000000 RTC_IRQHandler
+20004054 g       .bss	00000000 _ebss
+00000dbc g     F .text	00000032 UART1_DefInit
+20003c70 g     F .highcode	00000038 FLASH_ROM_WAIT
+20004034 g     O .bss	00000014 my_re_buf1
+200038b6  w      .highcode	00000000 UART2_IRQHandler
+200038b2  w      .highcode	00000000 PWMX_IRQHandler
+20004028 g     O .bss	00000009 plate
+00000000 g       .init	00000000 _start
+000009a8 g     F .text	00000188 OpmvDataGet
+200038b0  w      .highcode	00000000 ADC_IRQHandler
+20003800 g       .highcode	00000000 _highcode_vma_start
+200038a8  w      .highcode	00000000 TMR2_IRQHandler
+00000cee g     F .text	00000032 UART0_DefInit
+20004000 g       .data	00000000 _data_vma
+20003a44 g     F .highcode	000000fc SetSysClock
+200038a4  w      .highcode	00000000 USB_IRQHandler
+00000886 g     F .text	000000a8 memset
+0000092e g     F .text	0000007a main
+20004022 g     O .bss	00000001 pt_w1
+20004020 g     O .bss	00000002 plate_firstMark
+00000004 g       .highcodelalign	00000000 _highcode_lma
+200038a2  w      .highcode	00000000 LLE_IRQHandler
+00000000 g       .init	00000000 _sinit
+2000401c g     O .bss	00000001 sumb_check
+200038ba  w      .highcode	00000000 WDOG_BAT_IRQHandler
+2000401b g     O .bss	00000001 suma_check
+200038b4  w      .highcode	00000000 TMR3_IRQHandler
+20008000 g       .stack	00000000 _eusrstack
+20003896  w      .highcode	00000000 SW_Handler
+00000b30 g     F .text	000000a6 GPIOA_ModeCfg
+00000c7c g     F .text	00000042 GetSysClock
+20004018 g       .data	00000000 _edata
+2000389e  w      .highcode	00000000 SPI0_IRQHandler
+20003fdc g       .highcode	00000000 _highcode_vma_end
+20004024 g     O .bss	00000001 suma
+00000f38 g       .dlalign	00000000 _data_lma
+00000d3a g     F .text	0000002a UART0_INTCfg
+000007e0  w      .text	00000000 handle_reset
+200038b8  w      .highcode	00000000 UART3_IRQHandler
+20003bfe g     F .highcode	0000000e FLASH_ROM_END
+200038a6  w      .highcode	00000000 TMR1_IRQHandler
+20003b40 g     F .highcode	00000038 SYS_ResetExecute
+00000d8c g     F .text	00000030 UART1_BaudRateCfg
+
+
+
+Disassembly of section .init:
+
+00000000 <_sinit>:
+_start():
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:17
+
+	.section	.init,"ax",@progbits
+	.global	_start
+	.align	1
+_start:
+	j	handle_reset
+   0:	7e00006f          	j	7e0 <handle_reset>
+
+Disassembly of section .highcode:
+
+20003800 <_highcode_vma_start>:
+	...
+_vector_base():
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:25
+    .align  1
+_vector_base:
+    .option norvc;
+    .word   0
+    .word   0
+        j   NMI_Handler                 /* NMI Handler */
+20003808:	0880006f          	j	20003890 <NMI_Handler>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:26
+        j   HardFault_Handler           /* Hard Fault Handler */
+2000380c:	36c0006f          	j	20003b78 <HardFault_Handler>
+	...
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:35
+    .word   0
+    .word   0
+    .word   0
+    .word   0
+    .word   0
+        j   SysTick_Handler            /* SysTick Handler */
+20003830:	0640006f          	j	20003894 <SysTick_Handler>
+20003834:	0000                	unimp
+20003836:	0000                	unimp
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:37
+    .word   0
+        j   SW_Handler                 /* SW Handler */
+20003838:	05e0006f          	j	20003896 <SW_Handler>
+2000383c:	0000                	unimp
+2000383e:	0000                	unimp
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:40
+    .word   0
+    /* External Interrupts */
+        j   TMR0_IRQHandler            /* 0:  TMR0 */
+20003840:	0580006f          	j	20003898 <TMR0_IRQHandler>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:41
+        j   GPIOA_IRQHandler           /* GPIOA */
+20003844:	0560006f          	j	2000389a <GPIOA_IRQHandler>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:42
+        j   GPIOB_IRQHandler           /* GPIOB */
+20003848:	0540006f          	j	2000389c <GPIOB_IRQHandler>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:43
+        j   SPI0_IRQHandler            /* SPI0 */
+2000384c:	0520006f          	j	2000389e <SPI0_IRQHandler>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:44
+        j   BB_IRQHandler              /* BLEB */
+20003850:	0500006f          	j	200038a0 <BB_IRQHandler>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:45
+        j   LLE_IRQHandler             /* BLEL */
+20003854:	04e0006f          	j	200038a2 <LLE_IRQHandler>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:46
+        j   USB_IRQHandler             /* USB */
+20003858:	04c0006f          	j	200038a4 <USB_IRQHandler>
+2000385c:	0000                	unimp
+2000385e:	0000                	unimp
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:48
+        .word   0
+        j   TMR1_IRQHandler            /* TMR1 */
+20003860:	0460006f          	j	200038a6 <TMR1_IRQHandler>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:49
+        j   TMR2_IRQHandler            /* TMR2 */
+20003864:	0440006f          	j	200038a8 <TMR2_IRQHandler>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:50
+        j   UART0_IRQHandler           /* UART0 */
+20003868:	0540006f          	j	200038bc <UART0_IRQHandler>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:51
+        j   UART1_IRQHandler           /* UART1 */
+2000386c:	1c00006f          	j	20003a2c <UART1_IRQHandler>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:52
+        j   RTC_IRQHandler             /* RTC */
+20003870:	03e0006f          	j	200038ae <RTC_IRQHandler>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:53
+        j   ADC_IRQHandler             /* ADC */
+20003874:	03c0006f          	j	200038b0 <ADC_IRQHandler>
+20003878:	0000                	unimp
+2000387a:	0000                	unimp
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:55
+        .word   0
+        j   PWMX_IRQHandler            /* PWMX */
+2000387c:	0360006f          	j	200038b2 <PWMX_IRQHandler>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:56
+        j   TMR3_IRQHandler            /* TMR3 */
+20003880:	0340006f          	j	200038b4 <TMR3_IRQHandler>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:57
+        j   UART2_IRQHandler           /* UART2 */
+20003884:	0320006f          	j	200038b6 <UART2_IRQHandler>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:58
+        j   UART3_IRQHandler           /* UART3 */
+20003888:	0300006f          	j	200038b8 <UART3_IRQHandler>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:59
+        j   WDOG_BAT_IRQHandler        /* WDOG_BAT */
+2000388c:	02e0006f          	j	200038ba <WDOG_BAT_IRQHandler>
+
+20003890 <NMI_Handler>:
+NMI_Handler():
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:87
+    .weak   TMR3_IRQHandler
+    .weak   UART2_IRQHandler
+    .weak   UART3_IRQHandler
+    .weak   WDOG_BAT_IRQHandler
+
+NMI_Handler:  1:  j 1b
+20003890:	a001                	j	20003890 <NMI_Handler>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:88
+HardFault_Handler:  1:  j 1b
+20003892:	a001                	j	20003892 <NMI_Handler+0x2>
+
+20003894 <SysTick_Handler>:
+SysTick_Handler():
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:89
+SysTick_Handler:  1:  j 1b
+20003894:	a001                	j	20003894 <SysTick_Handler>
+
+20003896 <SW_Handler>:
+SW_Handler():
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:90
+SW_Handler:  1:  j 1b
+20003896:	a001                	j	20003896 <SW_Handler>
+
+20003898 <TMR0_IRQHandler>:
+TMR0_IRQHandler():
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:91
+TMR0_IRQHandler:  1:  j 1b
+20003898:	a001                	j	20003898 <TMR0_IRQHandler>
+
+2000389a <GPIOA_IRQHandler>:
+GPIOA_IRQHandler():
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:92
+GPIOA_IRQHandler:  1:  j 1b
+2000389a:	a001                	j	2000389a <GPIOA_IRQHandler>
+
+2000389c <GPIOB_IRQHandler>:
+GPIOB_IRQHandler():
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:93
+GPIOB_IRQHandler:  1:  j 1b
+2000389c:	a001                	j	2000389c <GPIOB_IRQHandler>
+
+2000389e <SPI0_IRQHandler>:
+SPI0_IRQHandler():
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:94
+SPI0_IRQHandler:  1:  j 1b
+2000389e:	a001                	j	2000389e <SPI0_IRQHandler>
+
+200038a0 <BB_IRQHandler>:
+BB_IRQHandler():
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:95
+BB_IRQHandler:  1:  j 1b
+200038a0:	a001                	j	200038a0 <BB_IRQHandler>
+
+200038a2 <LLE_IRQHandler>:
+LLE_IRQHandler():
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:96
+LLE_IRQHandler:  1:  j 1b
+200038a2:	a001                	j	200038a2 <LLE_IRQHandler>
+
+200038a4 <USB_IRQHandler>:
+USB_IRQHandler():
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:97
+USB_IRQHandler:  1:  j 1b
+200038a4:	a001                	j	200038a4 <USB_IRQHandler>
+
+200038a6 <TMR1_IRQHandler>:
+TMR1_IRQHandler():
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:98
+TMR1_IRQHandler:  1:  j 1b
+200038a6:	a001                	j	200038a6 <TMR1_IRQHandler>
+
+200038a8 <TMR2_IRQHandler>:
+TMR2_IRQHandler():
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:99
+TMR2_IRQHandler:  1:  j 1b
+200038a8:	a001                	j	200038a8 <TMR2_IRQHandler>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:100
+UART0_IRQHandler:  1:  j 1b
+200038aa:	a001                	j	200038aa <TMR2_IRQHandler+0x2>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:101
+UART1_IRQHandler:  1:  j 1b
+200038ac:	a001                	j	200038ac <TMR2_IRQHandler+0x4>
+
+200038ae <RTC_IRQHandler>:
+RTC_IRQHandler():
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:102
+RTC_IRQHandler:  1:  j 1b
+200038ae:	a001                	j	200038ae <RTC_IRQHandler>
+
+200038b0 <ADC_IRQHandler>:
+ADC_IRQHandler():
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:103
+ADC_IRQHandler:  1:  j 1b
+200038b0:	a001                	j	200038b0 <ADC_IRQHandler>
+
+200038b2 <PWMX_IRQHandler>:
+PWMX_IRQHandler():
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:104
+PWMX_IRQHandler:  1:  j 1b
+200038b2:	a001                	j	200038b2 <PWMX_IRQHandler>
+
+200038b4 <TMR3_IRQHandler>:
+TMR3_IRQHandler():
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:105
+TMR3_IRQHandler:  1:  j 1b
+200038b4:	a001                	j	200038b4 <TMR3_IRQHandler>
+
+200038b6 <UART2_IRQHandler>:
+UART2_IRQHandler():
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:106
+UART2_IRQHandler:  1:  j 1b
+200038b6:	a001                	j	200038b6 <UART2_IRQHandler>
+
+200038b8 <UART3_IRQHandler>:
+UART3_IRQHandler():
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:107
+UART3_IRQHandler:  1:  j 1b
+200038b8:	a001                	j	200038b8 <UART3_IRQHandler>
+
+200038ba <WDOG_BAT_IRQHandler>:
+WDOG_BAT_IRQHandler():
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:108
+WDOG_BAT_IRQHandler:  1:  j 1b
+200038ba:	a001                	j	200038ba <WDOG_BAT_IRQHandler>
+
+200038bc <UART0_IRQHandler>:
+UART0_IRQHandler():
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:88
+void UART0_IRQHandler(void)
+{
+//    volatile uint8_t i;
+
+
+    switch(UART0_GetITFlag())
+200038bc:	40003737          	lui	a4,0x40003
+200038c0:	00474783          	lbu	a5,4(a4) # 40003004 <_eusrstack+0x1fffb004>
+200038c4:	4691                	li	a3,4
+200038c6:	8bbd                	andi	a5,a5,15
+200038c8:	00d78963          	beq	a5,a3,200038da <UART0_IRQHandler+0x1e>
+200038cc:	4699                	li	a3,6
+200038ce:	14d79d63          	bne	a5,a3,20003a28 <UART0_IRQHandler+0x16c>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:92
+    {
+        case UART_II_LINE_STAT: // 线路状态错误
+        {
+            UART0_GetLinSTA();
+200038d2:	00574783          	lbu	a5,5(a4)
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:93
+            break;
+200038d6:	30200073          	mret
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:84
+{
+200038da:	1141                	addi	sp,sp,-16
+200038dc:	c622                	sw	s0,12(sp)
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:100
+
+
+        // 数据达到设置触发点
+        case UART_II_RECV_RDY:
+
+            my_re_buf1[pt_w1] = UART0_RecvByte();
+200038de:	00874783          	lbu	a5,8(a4)
+200038e2:	81c18513          	addi	a0,gp,-2020 # 20004034 <my_re_buf1>
+200038e6:	80a1c703          	lbu	a4,-2038(gp) # 20004022 <pt_w1>
+200038ea:	972a                	add	a4,a4,a0
+200038ec:	0ff7f793          	andi	a5,a5,255
+200038f0:	00f70023          	sb	a5,0(a4)
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:101
+            if(my_re_buf1[0]==0xAA)                                     //如果第一帧接收到的是帧头，则继续下面的；不是帧头则将指针归位重新接收
+200038f4:	81c1c683          	lbu	a3,-2020(gp) # 20004034 <my_re_buf1>
+200038f8:	0aa00713          	li	a4,170
+200038fc:	842a                	mv	s0,a0
+200038fe:	12e69063          	bne	a3,a4,20003a1e <UART0_IRQHandler+0x162>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:103
+            {
+                OpmvDataGet(my_re_buf1[pt_w1]);
+20003902:	853e                	mv	a0,a5
+20003904:	dfffd097          	auipc	ra,0xdfffd
+20003908:	0a4080e7          	jalr	164(ra) # 9a8 <OpmvDataGet>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:104
+                pt_w1++;
+2000390c:	80a18793          	addi	a5,gp,-2038 # 20004022 <pt_w1>
+20003910:	0007c783          	lbu	a5,0(a5)
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:106
+
+                if(pt_w1>16)                                            //当16个数据全部传完时候（4+9+2（sum） +2（plate_firstMark））
+20003914:	4741                	li	a4,16
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:104
+                pt_w1++;
+20003916:	0785                	addi	a5,a5,1
+20003918:	0ff7f793          	andi	a5,a5,255
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:106
+                if(pt_w1>16)                                            //当16个数据全部传完时候（4+9+2（sum） +2（plate_firstMark））
+2000391c:	00f76863          	bltu	a4,a5,2000392c <UART0_IRQHandler+0x70>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:104
+                pt_w1++;
+20003920:	80f18523          	sb	a5,-2038(gp) # 20004022 <pt_w1>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:170
+            break;
+
+        default:
+            break;
+    }
+}
+20003924:	4432                	lw	s0,12(sp)
+20003926:	0141                	addi	sp,sp,16
+20003928:	30200073          	mret
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:108
+                    pt_w1=0;
+2000392c:	80018523          	sb	zero,-2038(gp) # 20004022 <pt_w1>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:110
+                    for(uint8_t i = 0; i <= 12;i++)                     // 和校验     0到12,(4个+9个)
+20003930:	00000797          	auipc	a5,0x0
+20003934:	6eb7c783          	lbu	a5,1771(a5) # 2000401b <suma_check>
+20003938:	00000717          	auipc	a4,0x0
+2000393c:	6e474703          	lbu	a4,1764(a4) # 2000401c <sumb_check>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:108
+                    pt_w1=0;
+20003940:	4681                	li	a3,0
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:110
+                    for(uint8_t i = 0; i <= 12;i++)                     // 和校验     0到12,(4个+9个)
+20003942:	4635                	li	a2,13
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:112 (discriminator 3)
+                        suma_check += my_re_buf1[i];
+20003944:	00d405b3          	add	a1,s0,a3
+20003948:	0005c583          	lbu	a1,0(a1)
+2000394c:	0685                	addi	a3,a3,1
+2000394e:	97ae                	add	a5,a5,a1
+20003950:	0ff7f793          	andi	a5,a5,255
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:114 (discriminator 3)
+                        sumb_check += suma_check;
+20003954:	973e                	add	a4,a4,a5
+20003956:	0ff77713          	andi	a4,a4,255
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:110 (discriminator 3)
+                    for(uint8_t i = 0; i <= 12;i++)                     // 和校验     0到12,(4个+9个)
+2000395a:	fec695e3          	bne	a3,a2,20003944 <UART0_IRQHandler+0x88>
+2000395e:	00000697          	auipc	a3,0x0
+20003962:	6af68ea3          	sb	a5,1725(a3) # 2000401b <suma_check>
+20003966:	00000697          	auipc	a3,0x0
+2000396a:	6ae68b23          	sb	a4,1718(a3) # 2000401c <sumb_check>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:117
+                    if(suma_check == suma && sumb_check == sumb )       //和校验通过启动UART1中断函数并向上位机发送车牌信息
+2000396e:	80c1c683          	lbu	a3,-2036(gp) # 20004024 <suma>
+20003972:	08f69c63          	bne	a3,a5,20003a0a <UART0_IRQHandler+0x14e>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:117 (discriminator 1)
+20003976:	80d1c783          	lbu	a5,-2035(gp) # 20004025 <sumb>
+2000397a:	08e79863          	bne	a5,a4,20003a0a <UART0_IRQHandler+0x14e>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:119
+                        memcpy(plate,openmvdata,9);
+2000397e:	83018593          	addi	a1,gp,-2000 # 20004048 <openmvdata>
+20003982:	4625                	li	a2,9
+20003984:	81018513          	addi	a0,gp,-2032 # 20004028 <plate>
+20003988:	dfffd097          	auipc	ra,0xdfffd
+2000398c:	4d2080e7          	jalr	1234(ra) # e5a <memcpy>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:120
+                        memcpy(platefirstmark,plate_firstMark,2);
+20003990:	00000797          	auipc	a5,0x0
+20003994:	69078793          	addi	a5,a5,1680 # 20004020 <plate_firstMark>
+20003998:	0007c703          	lbu	a4,0(a5)
+2000399c:	0017c783          	lbu	a5,1(a5)
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:121
+                        UART1_SendString(plate, sizeof(plate));         //启动uart1的中断并发送plate中的所有信息
+200039a0:	45a5                	li	a1,9
+200039a2:	81018513          	addi	a0,gp,-2032 # 20004028 <plate>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:120
+                        memcpy(platefirstmark,plate_firstMark,2);
+200039a6:	00000697          	auipc	a3,0x0
+200039aa:	66e68923          	sb	a4,1650(a3) # 20004018 <_edata>
+200039ae:	00000717          	auipc	a4,0x0
+200039b2:	66f705a3          	sb	a5,1643(a4) # 20004019 <_edata+0x1>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:121
+                        UART1_SendString(plate, sizeof(plate));         //启动uart1的中断并发送plate中的所有信息
+200039b6:	dfffd097          	auipc	ra,0xdfffd
+200039ba:	47c080e7          	jalr	1148(ra) # e32 <UART1_SendString>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:130
+                    UART0_SendString(my_re_buf1, sizeof(my_re_buf1));
+200039be:	45d1                	li	a1,20
+200039c0:	81c18513          	addi	a0,gp,-2020 # 20004034 <my_re_buf1>
+200039c4:	dfffd097          	auipc	ra,0xdfffd
+200039c8:	3a0080e7          	jalr	928(ra) # d64 <UART0_SendString>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:133
+                    memset(my_re_buf1,0,sizeof(my_re_buf1));
+200039cc:	4651                	li	a2,20
+200039ce:	4581                	li	a1,0
+200039d0:	81c18513          	addi	a0,gp,-2020 # 20004034 <my_re_buf1>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:144
+                memset(my_re_buf1,0,sizeof(my_re_buf1));
+200039d4:	dfffd097          	auipc	ra,0xdfffd
+200039d8:	eb2080e7          	jalr	-334(ra) # 886 <memset>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:145
+                memset(openmvdata,0,sizeof(openmvdata));
+200039dc:	4625                	li	a2,9
+200039de:	4581                	li	a1,0
+200039e0:	83018513          	addi	a0,gp,-2000 # 20004048 <openmvdata>
+200039e4:	dfffd097          	auipc	ra,0xdfffd
+200039e8:	ea2080e7          	jalr	-350(ra) # 886 <memset>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:146
+                memset(plate,0,sizeof(plate));
+200039ec:	8001a823          	sw	zero,-2032(gp) # 20004028 <plate>
+200039f0:	8001aa23          	sw	zero,-2028(gp) # 2000402c <plate+0x4>
+200039f4:	80018c23          	sb	zero,-2024(gp) # 20004030 <plate+0x8>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:147
+                suma_check = 0;
+200039f8:	00000797          	auipc	a5,0x0
+200039fc:	620781a3          	sb	zero,1571(a5) # 2000401b <suma_check>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:148
+                sumb_check = 0;
+20003a00:	00000797          	auipc	a5,0x0
+20003a04:	60078e23          	sb	zero,1564(a5) # 2000401c <sumb_check>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:170
+}
+20003a08:	bf31                	j	20003924 <UART0_IRQHandler+0x68>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:125
+                        UART0_SendString(plate_false, sizeof(plate_false));
+20003a0a:	45d9                	li	a1,22
+20003a0c:	00000517          	auipc	a0,0x0
+20003a10:	5f450513          	addi	a0,a0,1524 # 20004000 <plate_false>
+20003a14:	dfffd097          	auipc	ra,0xdfffd
+20003a18:	350080e7          	jalr	848(ra) # d64 <UART0_SendString>
+20003a1c:	b74d                	j	200039be <UART0_IRQHandler+0x102>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:143
+                pt_w1=0;
+20003a1e:	80018523          	sb	zero,-2038(gp) # 20004022 <pt_w1>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:144
+                memset(my_re_buf1,0,sizeof(my_re_buf1));
+20003a22:	4651                	li	a2,20
+20003a24:	4581                	li	a1,0
+20003a26:	b77d                	j	200039d4 <UART0_IRQHandler+0x118>
+20003a28:	30200073          	mret
+
+20003a2c <UART1_IRQHandler>:
+UART1_IRQHandler():
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:188
+__attribute__((section(".highcode")))
+void UART1_IRQHandler(void)
+{
+//    volatile uint8_t i;
+
+    switch(UART1_GetITFlag())
+20003a2c:	40003737          	lui	a4,0x40003
+20003a30:	40474783          	lbu	a5,1028(a4) # 40003404 <_eusrstack+0x1fffb404>
+20003a34:	4699                	li	a3,6
+20003a36:	8bbd                	andi	a5,a5,15
+20003a38:	00d79463          	bne	a5,a3,20003a40 <UART1_IRQHandler+0x14>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:192
+    {
+        case UART_II_LINE_STAT: // 线路状态错误
+        {
+            UART1_GetLinSTA();
+20003a3c:	40574783          	lbu	a5,1029(a4)
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:217
+            break;
+
+        default:
+            break;
+    }
+}
+20003a40:	30200073          	mret
+
+20003a44 <SetSysClock>:
+sys_safe_access_enable():
+E:\chelou\CH573\EVTEVT\EVT\EXAM\SRC\StdPeriphDriver\inc/CH57x_sys.h:178
+ * @NOTE: 进入安全访问模式后约16个系统主频周期都处于安全模式下，
+ * 该有效期内可以改写一个或多个安全类寄存器，超出上述有效期后将自动终止安全模式。
+ */
+ __attribute__((always_inline)) static inline void sys_safe_access_enable(void)
+{
+    R8_SAFE_ACCESS_SIG = SAFE_ACCESS_SIG1;
+20003a44:	400017b7          	lui	a5,0x40001
+20003a48:	05700693          	li	a3,87
+20003a4c:	04d78023          	sb	a3,64(a5) # 40001040 <_eusrstack+0x1fff9040>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\SRC\StdPeriphDriver\inc/CH57x_sys.h:179
+    R8_SAFE_ACCESS_SIG = SAFE_ACCESS_SIG2;
+20003a50:	fa800713          	li	a4,-88
+20003a54:	04e78023          	sb	a4,64(a5)
+SetSysClock():
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:29
+__attribute__((section(".highcode")))
+void SetSysClock(SYS_CLKTypeDef sc)
+{
+    uint32_t i;
+    sys_safe_access_enable();
+    R8_PLL_CONFIG &= ~(1 << 5); //
+20003a58:	04b7c603          	lbu	a2,75(a5)
+20003a5c:	0df67613          	andi	a2,a2,223
+20003a60:	04c785a3          	sb	a2,75(a5)
+sys_safe_access_disable():
+E:\chelou\CH573\EVTEVT\EVT\EXAM\SRC\StdPeriphDriver\inc/CH57x_sys.h:184
+}
+
+__attribute__((always_inline)) static inline void sys_safe_access_disable(void)
+{
+    R8_SAFE_ACCESS_SIG = 0;
+20003a64:	04078023          	sb	zero,64(a5)
+SetSysClock():
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:31
+    sys_safe_access_disable();
+    if(sc & 0x20)
+20003a68:	02057613          	andi	a2,a0,32
+20003a6c:	c62d                	beqz	a2,20003ad6 <SetSysClock+0x92>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:33
+    { // HSE div
+        if(!(R8_HFCK_PWR_CTRL & RB_CLK_XT32M_PON))
+20003a6e:	00a7c603          	lbu	a2,10(a5)
+20003a72:	8a11                	andi	a2,a2,4
+20003a74:	e20d                	bnez	a2,20003a96 <SetSysClock+0x52>
+sys_safe_access_enable():
+E:\chelou\CH573\EVTEVT\EVT\EXAM\SRC\StdPeriphDriver\inc/CH57x_sys.h:178
+    R8_SAFE_ACCESS_SIG = SAFE_ACCESS_SIG1;
+20003a76:	04d78023          	sb	a3,64(a5)
+E:\chelou\CH573\EVTEVT\EVT\EXAM\SRC\StdPeriphDriver\inc/CH57x_sys.h:179
+    R8_SAFE_ACCESS_SIG = SAFE_ACCESS_SIG2;
+20003a7a:	04e78023          	sb	a4,64(a5)
+SetSysClock():
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:36
+        {
+            sys_safe_access_enable();
+            R8_HFCK_PWR_CTRL |= RB_CLK_XT32M_PON; // HSE power on
+20003a7e:	00a7c703          	lbu	a4,10(a5)
+20003a82:	00476713          	ori	a4,a4,4
+20003a86:	00e78523          	sb	a4,10(a5)
+20003a8a:	4b000793          	li	a5,1200
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:39 (discriminator 3)
+            for(i = 0; i < 1200; i++)
+            {
+                __nop();
+20003a8e:	0001                	nop
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:40 (discriminator 3)
+                __nop();
+20003a90:	0001                	nop
+20003a92:	17fd                	addi	a5,a5,-1
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:37 (discriminator 3)
+            for(i = 0; i < 1200; i++)
+20003a94:	ffed                	bnez	a5,20003a8e <SetSysClock+0x4a>
+sys_safe_access_enable():
+E:\chelou\CH573\EVTEVT\EVT\EXAM\SRC\StdPeriphDriver\inc/CH57x_sys.h:178
+    R8_SAFE_ACCESS_SIG = SAFE_ACCESS_SIG1;
+20003a96:	400017b7          	lui	a5,0x40001
+20003a9a:	05700693          	li	a3,87
+20003a9e:	04d78023          	sb	a3,64(a5) # 40001040 <_eusrstack+0x1fff9040>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\SRC\StdPeriphDriver\inc/CH57x_sys.h:179
+    R8_SAFE_ACCESS_SIG = SAFE_ACCESS_SIG2;
+20003aa2:	fa800713          	li	a4,-88
+20003aa6:	04e78023          	sb	a4,64(a5)
+SetSysClock():
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:45
+            }
+        }
+
+        sys_safe_access_enable();
+        R16_CLK_SYS_CFG = (0 << 6) | (sc & 0x1f);
+20003aaa:	897d                	andi	a0,a0,31
+20003aac:	00a79423          	sh	a0,8(a5)
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:46
+        __nop();
+20003ab0:	0001                	nop
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:47
+        __nop();
+20003ab2:	0001                	nop
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:48
+        __nop();
+20003ab4:	0001                	nop
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:49
+        __nop();
+20003ab6:	0001                	nop
+sys_safe_access_disable():
+E:\chelou\CH573\EVTEVT\EVT\EXAM\SRC\StdPeriphDriver\inc/CH57x_sys.h:184
+    R8_SAFE_ACCESS_SIG = 0;
+20003ab8:	04078023          	sb	zero,64(a5)
+sys_safe_access_enable():
+E:\chelou\CH573\EVTEVT\EVT\EXAM\SRC\StdPeriphDriver\inc/CH57x_sys.h:178
+    R8_SAFE_ACCESS_SIG = SAFE_ACCESS_SIG1;
+20003abc:	04d78023          	sb	a3,64(a5)
+E:\chelou\CH573\EVTEVT\EVT\EXAM\SRC\StdPeriphDriver\inc/CH57x_sys.h:179
+    R8_SAFE_ACCESS_SIG = SAFE_ACCESS_SIG2;
+20003ac0:	04e78023          	sb	a4,64(a5)
+SetSysClock():
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:52
+        sys_safe_access_disable();
+        sys_safe_access_enable();
+        R8_FLASH_CFG = 0X51;
+20003ac4:	05100693          	li	a3,81
+20003ac8:	40002737          	lui	a4,0x40002
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:76
+        __nop();
+        __nop();
+        __nop();
+        sys_safe_access_disable();
+        sys_safe_access_enable();
+        R8_FLASH_CFG = 0X53;
+20003acc:	80d703a3          	sb	a3,-2041(a4) # 40001807 <_eusrstack+0x1fff9807>
+sys_safe_access_disable():
+E:\chelou\CH573\EVTEVT\EVT\EXAM\SRC\StdPeriphDriver\inc/CH57x_sys.h:184
+    R8_SAFE_ACCESS_SIG = 0;
+20003ad0:	04078023          	sb	zero,64(a5)
+SetSysClock():
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:79
+        sys_safe_access_disable();
+    }
+}
+20003ad4:	8082                	ret
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:56
+    else if(sc & 0x40)
+20003ad6:	04057613          	andi	a2,a0,64
+20003ada:	de6d                	beqz	a2,20003ad4 <SetSysClock+0x90>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:58
+        if(!(R8_HFCK_PWR_CTRL & RB_CLK_PLL_PON))
+20003adc:	00a7c603          	lbu	a2,10(a5)
+20003ae0:	8a41                	andi	a2,a2,16
+20003ae2:	e20d                	bnez	a2,20003b04 <SetSysClock+0xc0>
+sys_safe_access_enable():
+E:\chelou\CH573\EVTEVT\EVT\EXAM\SRC\StdPeriphDriver\inc/CH57x_sys.h:178
+    R8_SAFE_ACCESS_SIG = SAFE_ACCESS_SIG1;
+20003ae4:	04d78023          	sb	a3,64(a5)
+E:\chelou\CH573\EVTEVT\EVT\EXAM\SRC\StdPeriphDriver\inc/CH57x_sys.h:179
+    R8_SAFE_ACCESS_SIG = SAFE_ACCESS_SIG2;
+20003ae8:	04e78023          	sb	a4,64(a5)
+SetSysClock():
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:61
+            R8_HFCK_PWR_CTRL |= RB_CLK_PLL_PON; // PLL power on
+20003aec:	00a7c703          	lbu	a4,10(a5)
+20003af0:	01076713          	ori	a4,a4,16
+20003af4:	00e78523          	sb	a4,10(a5)
+20003af8:	7d000793          	li	a5,2000
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:64 (discriminator 3)
+                __nop();
+20003afc:	0001                	nop
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:65 (discriminator 3)
+                __nop();
+20003afe:	0001                	nop
+20003b00:	17fd                	addi	a5,a5,-1
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:62 (discriminator 3)
+            for(i = 0; i < 2000; i++)
+20003b02:	ffed                	bnez	a5,20003afc <SetSysClock+0xb8>
+sys_safe_access_enable():
+E:\chelou\CH573\EVTEVT\EVT\EXAM\SRC\StdPeriphDriver\inc/CH57x_sys.h:178
+    R8_SAFE_ACCESS_SIG = SAFE_ACCESS_SIG1;
+20003b04:	400017b7          	lui	a5,0x40001
+20003b08:	05700693          	li	a3,87
+20003b0c:	04d78023          	sb	a3,64(a5) # 40001040 <_eusrstack+0x1fff9040>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\SRC\StdPeriphDriver\inc/CH57x_sys.h:179
+    R8_SAFE_ACCESS_SIG = SAFE_ACCESS_SIG2;
+20003b10:	fa800713          	li	a4,-88
+SetSysClock():
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:69
+        R16_CLK_SYS_CFG = (1 << 6) | (sc & 0x1f);
+20003b14:	897d                	andi	a0,a0,31
+sys_safe_access_enable():
+E:\chelou\CH573\EVTEVT\EVT\EXAM\SRC\StdPeriphDriver\inc/CH57x_sys.h:179
+20003b16:	04e78023          	sb	a4,64(a5)
+SetSysClock():
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:69
+20003b1a:	04056513          	ori	a0,a0,64
+20003b1e:	00a79423          	sh	a0,8(a5)
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:70
+        __nop();
+20003b22:	0001                	nop
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:71
+        __nop();
+20003b24:	0001                	nop
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:72
+        __nop();
+20003b26:	0001                	nop
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:73
+        __nop();
+20003b28:	0001                	nop
+sys_safe_access_disable():
+E:\chelou\CH573\EVTEVT\EVT\EXAM\SRC\StdPeriphDriver\inc/CH57x_sys.h:184
+    R8_SAFE_ACCESS_SIG = 0;
+20003b2a:	04078023          	sb	zero,64(a5)
+sys_safe_access_enable():
+E:\chelou\CH573\EVTEVT\EVT\EXAM\SRC\StdPeriphDriver\inc/CH57x_sys.h:178
+    R8_SAFE_ACCESS_SIG = SAFE_ACCESS_SIG1;
+20003b2e:	04d78023          	sb	a3,64(a5)
+E:\chelou\CH573\EVTEVT\EVT\EXAM\SRC\StdPeriphDriver\inc/CH57x_sys.h:179
+    R8_SAFE_ACCESS_SIG = SAFE_ACCESS_SIG2;
+20003b32:	04e78023          	sb	a4,64(a5)
+SetSysClock():
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:76
+        R8_FLASH_CFG = 0X53;
+20003b36:	05300693          	li	a3,83
+20003b3a:	40002737          	lui	a4,0x40002
+20003b3e:	b779                	j	20003acc <SetSysClock+0x88>
+
+20003b40 <SYS_ResetExecute>:
+SYS_ResetExecute():
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:141
+ *
+ * @return  none
+ */
+__attribute__((section(".highcode")))
+void SYS_ResetExecute(void)
+{
+20003b40:	1141                	addi	sp,sp,-16
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:142
+    FLASH_ROM_SW_RESET();
+20003b42:	4681                	li	a3,0
+20003b44:	4601                	li	a2,0
+20003b46:	4581                	li	a1,0
+20003b48:	4511                	li	a0,4
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:141
+{
+20003b4a:	c606                	sw	ra,12(sp)
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:142
+    FLASH_ROM_SW_RESET();
+20003b4c:	2ab1                	jal	20003ca8 <FLASH_EEPROM_CMD>
+sys_safe_access_enable():
+E:\chelou\CH573\EVTEVT\EVT\EXAM\SRC\StdPeriphDriver\inc/CH57x_sys.h:178
+    R8_SAFE_ACCESS_SIG = SAFE_ACCESS_SIG1;
+20003b4e:	400017b7          	lui	a5,0x40001
+20003b52:	05700713          	li	a4,87
+20003b56:	04e78023          	sb	a4,64(a5) # 40001040 <_eusrstack+0x1fff9040>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\SRC\StdPeriphDriver\inc/CH57x_sys.h:179
+    R8_SAFE_ACCESS_SIG = SAFE_ACCESS_SIG2;
+20003b5a:	fa800713          	li	a4,-88
+20003b5e:	04e78023          	sb	a4,64(a5)
+SYS_ResetExecute():
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:144
+    sys_safe_access_enable();
+    R8_RST_WDOG_CTRL |= RB_SOFTWARE_RESET;
+20003b62:	0467c703          	lbu	a4,70(a5)
+20003b66:	00176713          	ori	a4,a4,1
+20003b6a:	04e78323          	sb	a4,70(a5)
+sys_safe_access_disable():
+E:\chelou\CH573\EVTEVT\EVT\EXAM\SRC\StdPeriphDriver\inc/CH57x_sys.h:184
+    R8_SAFE_ACCESS_SIG = 0;
+20003b6e:	04078023          	sb	zero,64(a5)
+SYS_ResetExecute():
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:146
+    sys_safe_access_disable();
+}
+20003b72:	40b2                	lw	ra,12(sp)
+20003b74:	0141                	addi	sp,sp,16
+20003b76:	8082                	ret
+
+20003b78 <HardFault_Handler>:
+HardFault_Handler():
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:280
+__attribute__((interrupt("WCH-Interrupt-fast")))
+__attribute__((section(".highcode")))
+__attribute__((weak))
+void HardFault_Handler(void)
+{
+    FLASH_ROM_SW_RESET();
+20003b78:	4681                	li	a3,0
+20003b7a:	4601                	li	a2,0
+20003b7c:	4581                	li	a1,0
+20003b7e:	4511                	li	a0,4
+20003b80:	2225                	jal	20003ca8 <FLASH_EEPROM_CMD>
+sys_safe_access_enable():
+E:\chelou\CH573\EVTEVT\EVT\EXAM\SRC\StdPeriphDriver\inc/CH57x_sys.h:178
+    R8_SAFE_ACCESS_SIG = SAFE_ACCESS_SIG1;
+20003b82:	400017b7          	lui	a5,0x40001
+20003b86:	05700693          	li	a3,87
+20003b8a:	04d78023          	sb	a3,64(a5) # 40001040 <_eusrstack+0x1fff9040>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\SRC\StdPeriphDriver\inc/CH57x_sys.h:179
+    R8_SAFE_ACCESS_SIG = SAFE_ACCESS_SIG2;
+20003b8e:	fa800713          	li	a4,-88
+20003b92:	04e78023          	sb	a4,64(a5)
+HardFault_Handler():
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:282
+    sys_safe_access_enable();
+    R16_INT32K_TUNE = 0xFFFF;
+20003b96:	567d                	li	a2,-1
+20003b98:	02c79623          	sh	a2,44(a5)
+sys_safe_access_enable():
+E:\chelou\CH573\EVTEVT\EVT\EXAM\SRC\StdPeriphDriver\inc/CH57x_sys.h:178
+    R8_SAFE_ACCESS_SIG = SAFE_ACCESS_SIG1;
+20003b9c:	04d78023          	sb	a3,64(a5)
+E:\chelou\CH573\EVTEVT\EVT\EXAM\SRC\StdPeriphDriver\inc/CH57x_sys.h:179
+    R8_SAFE_ACCESS_SIG = SAFE_ACCESS_SIG2;
+20003ba0:	04e78023          	sb	a4,64(a5)
+HardFault_Handler():
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:284
+    sys_safe_access_enable();
+    R8_RST_WDOG_CTRL |= RB_SOFTWARE_RESET;
+20003ba4:	0467c703          	lbu	a4,70(a5)
+20003ba8:	00176713          	ori	a4,a4,1
+20003bac:	04e78323          	sb	a4,70(a5)
+sys_safe_access_disable():
+E:\chelou\CH573\EVTEVT\EVT\EXAM\SRC\StdPeriphDriver\inc/CH57x_sys.h:184
+    R8_SAFE_ACCESS_SIG = 0;
+20003bb0:	04078023          	sb	zero,64(a5)
+HardFault_Handler():
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:286 (discriminator 1)
+    sys_safe_access_disable();
+    while(1);
+20003bb4:	a001                	j	20003bb4 <HardFault_Handler+0x3c>
+
+20003bb6 <mDelayuS>:
+mDelayuS():
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:303
+__attribute__((section(".highcode")))
+void mDelayuS(uint16_t t)
+{
+    uint32_t i;
+#if(FREQ_SYS == 60000000)
+    i = t * 15;
+20003bb6:	47bd                	li	a5,15
+20003bb8:	02f50533          	mul	a0,a0,a5
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:325 (discriminator 1)
+#elif(FREQ_SYS == 1000000)
+    i = t >> 2;
+#endif
+    do
+    {
+        __nop();
+20003bbc:	0001                	nop
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:326 (discriminator 1)
+    } while(--i);
+20003bbe:	157d                	addi	a0,a0,-1
+20003bc0:	fd75                	bnez	a0,20003bbc <mDelayuS+0x6>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:327
+}
+20003bc2:	8082                	ret
+
+20003bc4 <mDelaymS>:
+mDelaymS():
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:340
+ *
+ * @return  none
+ */
+__attribute__((section(".highcode")))
+void mDelaymS(uint16_t t)
+{
+20003bc4:	1141                	addi	sp,sp,-16
+20003bc6:	c422                	sw	s0,8(sp)
+20003bc8:	c226                	sw	s1,4(sp)
+20003bca:	c606                	sw	ra,12(sp)
+20003bcc:	84aa                	mv	s1,a0
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:343
+    uint16_t i;
+
+    for(i = 0; i < t; i++)
+20003bce:	4401                	li	s0,0
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:343 (discriminator 1)
+20003bd0:	00941763          	bne	s0,s1,20003bde <mDelaymS+0x1a>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:347
+    {
+        mDelayuS(1000);
+    }
+}
+20003bd4:	40b2                	lw	ra,12(sp)
+20003bd6:	4422                	lw	s0,8(sp)
+20003bd8:	4492                	lw	s1,4(sp)
+20003bda:	0141                	addi	sp,sp,16
+20003bdc:	8082                	ret
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:343 (discriminator 3)
+    for(i = 0; i < t; i++)
+20003bde:	0405                	addi	s0,s0,1
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:345 (discriminator 3)
+        mDelayuS(1000);
+20003be0:	3e800513          	li	a0,1000
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:343 (discriminator 3)
+    for(i = 0; i < t; i++)
+20003be4:	0442                	slli	s0,s0,0x10
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:345 (discriminator 3)
+        mDelayuS(1000);
+20003be6:	3fc1                	jal	20003bb6 <mDelayuS>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:343 (discriminator 3)
+    for(i = 0; i < t; i++)
+20003be8:	8041                	srli	s0,s0,0x10
+20003bea:	b7dd                	j	20003bd0 <mDelaymS+0xc>
+
+20003bec <FLASH_ROM_BEG>:
+FLASH_ROM_BEG():
+20003bec:	80040323          	sb	zero,-2042(s0)
+20003bf0:	4715                	li	a4,5
+20003bf2:	80e40323          	sb	a4,-2042(s0)
+20003bf6:	0001                	nop
+20003bf8:	80a40223          	sb	a0,-2044(s0)
+20003bfc:	8082                	ret
+
+20003bfe <FLASH_ROM_END>:
+FLASH_ROM_END():
+20003bfe:	80640783          	lb	a5,-2042(s0)
+20003c02:	fe07cee3          	bltz	a5,20003bfe <FLASH_ROM_END>
+20003c06:	80040323          	sb	zero,-2042(s0)
+20003c0a:	8082                	ret
+
+20003c0c <FLASH_ROM_IN>:
+FLASH_ROM_IN():
+20003c0c:	80640783          	lb	a5,-2042(s0)
+20003c10:	fe07cee3          	bltz	a5,20003c0c <FLASH_ROM_IN>
+20003c14:	80444503          	lbu	a0,-2044(s0)
+20003c18:	8082                	ret
+
+20003c1a <FLASH_ROM_OUT>:
+FLASH_ROM_OUT():
+20003c1a:	80640783          	lb	a5,-2042(s0)
+20003c1e:	fe07cee3          	bltz	a5,20003c1a <FLASH_ROM_OUT>
+20003c22:	80a40223          	sb	a0,-2044(s0)
+20003c26:	8082                	ret
+
+20003c28 <FLASH_ROM_ADDR>:
+FLASH_ROM_ADDR():
+20003c28:	1141                	addi	sp,sp,-16
+20003c2a:	c426                	sw	s1,8(sp)
+20003c2c:	c24a                	sw	s2,4(sp)
+20003c2e:	c04e                	sw	s3,0(sp)
+20003c30:	c606                	sw	ra,12(sp)
+20003c32:	0bf57713          	andi	a4,a0,191
+20003c36:	47ad                	li	a5,11
+20003c38:	89aa                	mv	s3,a0
+20003c3a:	892e                	mv	s2,a1
+20003c3c:	4495                	li	s1,5
+20003c3e:	00f70663          	beq	a4,a5,20003c4a <FLASH_ROM_ADDR+0x22>
+20003c42:	4519                	li	a0,6
+20003c44:	3765                	jal	20003bec <FLASH_ROM_BEG>
+20003c46:	3f65                	jal	20003bfe <FLASH_ROM_END>
+20003c48:	448d                	li	s1,3
+20003c4a:	854e                	mv	a0,s3
+20003c4c:	3745                	jal	20003bec <FLASH_ROM_BEG>
+20003c4e:	59fd                	li	s3,-1
+20003c50:	14fd                	addi	s1,s1,-1
+20003c52:	01349863          	bne	s1,s3,20003c62 <FLASH_ROM_ADDR+0x3a>
+20003c56:	40b2                	lw	ra,12(sp)
+20003c58:	44a2                	lw	s1,8(sp)
+20003c5a:	4912                	lw	s2,4(sp)
+20003c5c:	4982                	lw	s3,0(sp)
+20003c5e:	0141                	addi	sp,sp,16
+20003c60:	8082                	ret
+20003c62:	01095513          	srli	a0,s2,0x10
+20003c66:	0ff57513          	andi	a0,a0,255
+20003c6a:	3f45                	jal	20003c1a <FLASH_ROM_OUT>
+20003c6c:	0922                	slli	s2,s2,0x8
+20003c6e:	b7cd                	j	20003c50 <FLASH_ROM_ADDR+0x28>
+
+20003c70 <FLASH_ROM_WAIT>:
+FLASH_ROM_WAIT():
+20003c70:	1101                	addi	sp,sp,-32
+20003c72:	cc26                	sw	s1,24(sp)
+20003c74:	ce06                	sw	ra,28(sp)
+20003c76:	000804b7          	lui	s1,0x80
+20003c7a:	3751                	jal	20003bfe <FLASH_ROM_END>
+20003c7c:	4515                	li	a0,5
+20003c7e:	37bd                	jal	20003bec <FLASH_ROM_BEG>
+20003c80:	3771                	jal	20003c0c <FLASH_ROM_IN>
+20003c82:	3769                	jal	20003c0c <FLASH_ROM_IN>
+20003c84:	c62a                	sw	a0,12(sp)
+20003c86:	3fa5                	jal	20003bfe <FLASH_ROM_END>
+20003c88:	4532                	lw	a0,12(sp)
+20003c8a:	00157793          	andi	a5,a0,1
+20003c8e:	eb89                	bnez	a5,20003ca0 <FLASH_ROM_WAIT+0x30>
+20003c90:	00156513          	ori	a0,a0,1
+20003c94:	0ff57513          	andi	a0,a0,255
+20003c98:	40f2                	lw	ra,28(sp)
+20003c9a:	44e2                	lw	s1,24(sp)
+20003c9c:	6105                	addi	sp,sp,32
+20003c9e:	8082                	ret
+20003ca0:	14fd                	addi	s1,s1,-1
+20003ca2:	fce9                	bnez	s1,20003c7c <FLASH_ROM_WAIT+0xc>
+20003ca4:	4501                	li	a0,0
+20003ca6:	bfcd                	j	20003c98 <FLASH_ROM_WAIT+0x28>
+
+20003ca8 <FLASH_EEPROM_CMD>:
+FLASH_EEPROM_CMD():
+20003ca8:	7139                	addi	sp,sp,-64
+20003caa:	dc26                	sw	s1,56(sp)
+20003cac:	da4a                	sw	s2,52(sp)
+20003cae:	d84e                	sw	s3,48(sp)
+20003cb0:	d652                	sw	s4,44(sp)
+20003cb2:	d456                	sw	s5,40(sp)
+20003cb4:	d25a                	sw	s6,36(sp)
+20003cb6:	d05e                	sw	s7,32(sp)
+20003cb8:	de06                	sw	ra,60(sp)
+20003cba:	ce62                	sw	s8,28(sp)
+20003cbc:	cc66                	sw	s9,24(sp)
+20003cbe:	e000e7b7          	lui	a5,0xe000e
+20003cc2:	577d                	li	a4,-1
+20003cc4:	0007aa83          	lw	s5,0(a5) # e000e000 <_eusrstack+0xc0006000>
+20003cc8:	c622                	sw	s0,12(sp)
+20003cca:	0047aa03          	lw	s4,4(a5)
+20003cce:	18e7a023          	sw	a4,384(a5)
+20003cd2:	18e7a223          	sw	a4,388(a5)
+20003cd6:	400017b7          	lui	a5,0x40001
+20003cda:	05700713          	li	a4,87
+20003cde:	04e78023          	sb	a4,64(a5) # 40001040 <_eusrstack+0x1fff9040>
+20003ce2:	fa800713          	li	a4,-88
+20003ce6:	04e78023          	sb	a4,64(a5)
+20003cea:	0447c783          	lbu	a5,68(a5)
+20003cee:	ff750b93          	addi	s7,a0,-9
+20003cf2:	84b6                	mv	s1,a3
+20003cf4:	07e2                	slli	a5,a5,0x18
+20003cf6:	0ffbfb93          	andi	s7,s7,255
+20003cfa:	4685                	li	a3,1
+20003cfc:	89aa                	mv	s3,a0
+20003cfe:	8b2e                	mv	s6,a1
+20003d00:	8932                	mv	s2,a2
+20003d02:	40002437          	lui	s0,0x40002
+20003d06:	87e1                	srai	a5,a5,0x18
+20003d08:	5701                	li	a4,-32
+20003d0a:	0176fa63          	bgeu	a3,s7,20003d1e <FLASH_EEPROM_CMD+0x76>
+20003d0e:	00d50863          	beq	a0,a3,20003d1e <FLASH_EEPROM_CMD+0x76>
+20003d12:	4689                	li	a3,2
+20003d14:	02000713          	li	a4,32
+20003d18:	00d51363          	bne	a0,a3,20003d1e <FLASH_EEPROM_CMD+0x76>
+20003d1c:	5701                	li	a4,-32
+20003d1e:	8fd9                	or	a5,a5,a4
+20003d20:	0ff7f793          	andi	a5,a5,255
+20003d24:	40001cb7          	lui	s9,0x40001
+20003d28:	04fc8223          	sb	a5,68(s9) # 40001044 <_eusrstack+0x1fff9044>
+20003d2c:	4711                	li	a4,4
+20003d2e:	80e40323          	sb	a4,-2042(s0) # 40001806 <_eusrstack+0x1fff9806>
+20003d32:	0ff00513          	li	a0,255
+20003d36:	3d5d                	jal	20003bec <FLASH_ROM_BEG>
+20003d38:	4c09                	li	s8,2
+20003d3a:	35d1                	jal	20003bfe <FLASH_ROM_END>
+20003d3c:	117c6963          	bltu	s8,s7,20003e4e <FLASH_EEPROM_CMD+0x1a6>
+20003d40:	000707b7          	lui	a5,0x70
+20003d44:	9b3e                	add	s6,s6,a5
+20003d46:	00078737          	lui	a4,0x78
+20003d4a:	5579                	li	a0,-2
+20003d4c:	02eb7e63          	bgeu	s6,a4,20003d88 <FLASH_EEPROM_CMD+0xe0>
+20003d50:	009b07b3          	add	a5,s6,s1
+20003d54:	02f76a63          	bltu	a4,a5,20003d88 <FLASH_EEPROM_CMD+0xe0>
+20003d58:	47a9                	li	a5,10
+20003d5a:	06f99963          	bne	s3,a5,20003dcc <FLASH_EEPROM_CMD+0x124>
+20003d5e:	e489                	bnez	s1,20003d68 <FLASH_EEPROM_CMD+0xc0>
+20003d60:	4481                	li	s1,0
+20003d62:	3d71                	jal	20003bfe <FLASH_ROM_END>
+20003d64:	8526                	mv	a0,s1
+20003d66:	a00d                	j	20003d88 <FLASH_EEPROM_CMD+0xe0>
+20003d68:	85da                	mv	a1,s6
+20003d6a:	4509                	li	a0,2
+20003d6c:	3d75                	jal	20003c28 <FLASH_ROM_ADDR>
+20003d6e:	0905                	addi	s2,s2,1
+20003d70:	fff94503          	lbu	a0,-1(s2)
+20003d74:	14fd                	addi	s1,s1,-1
+20003d76:	0b05                	addi	s6,s6,1
+20003d78:	354d                	jal	20003c1a <FLASH_ROM_OUT>
+20003d7a:	c481                	beqz	s1,20003d82 <FLASH_EEPROM_CMD+0xda>
+20003d7c:	0ffb7793          	andi	a5,s6,255
+20003d80:	f7fd                	bnez	a5,20003d6e <FLASH_EEPROM_CMD+0xc6>
+20003d82:	35fd                	jal	20003c70 <FLASH_ROM_WAIT>
+20003d84:	fd69                	bnez	a0,20003d5e <FLASH_EEPROM_CMD+0xb6>
+20003d86:	557d                	li	a0,-1
+20003d88:	400017b7          	lui	a5,0x40001
+20003d8c:	05700713          	li	a4,87
+20003d90:	04e78023          	sb	a4,64(a5) # 40001040 <_eusrstack+0x1fff9040>
+20003d94:	fa800713          	li	a4,-88
+20003d98:	04e78023          	sb	a4,64(a5)
+20003d9c:	0447c703          	lbu	a4,68(a5)
+20003da0:	8b41                	andi	a4,a4,16
+20003da2:	04e78223          	sb	a4,68(a5)
+20003da6:	50f2                	lw	ra,60(sp)
+20003da8:	e000e7b7          	lui	a5,0xe000e
+20003dac:	1157a023          	sw	s5,256(a5) # e000e100 <_eusrstack+0xc0006100>
+20003db0:	1147a223          	sw	s4,260(a5)
+20003db4:	54e2                	lw	s1,56(sp)
+20003db6:	4432                	lw	s0,12(sp)
+20003db8:	5952                	lw	s2,52(sp)
+20003dba:	59c2                	lw	s3,48(sp)
+20003dbc:	5a32                	lw	s4,44(sp)
+20003dbe:	5aa2                	lw	s5,40(sp)
+20003dc0:	5b12                	lw	s6,36(sp)
+20003dc2:	5b82                	lw	s7,32(sp)
+20003dc4:	4c72                	lw	s8,28(sp)
+20003dc6:	4ce2                	lw	s9,24(sp)
+20003dc8:	6121                	addi	sp,sp,64
+20003dca:	8082                	ret
+20003dcc:	47a5                	li	a5,9
+20003dce:	06f99563          	bne	s3,a5,20003e38 <FLASH_EEPROM_CMD+0x190>
+20003dd2:	6985                	lui	s3,0x1
+20003dd4:	0ff00913          	li	s2,255
+20003dd8:	009906b3          	add	a3,s2,s1
+20003ddc:	012b74b3          	and	s1,s6,s2
+20003de0:	94b6                	add	s1,s1,a3
+20003de2:	fff94913          	not	s2,s2
+20003de6:	009974b3          	and	s1,s2,s1
+20003dea:	6b85                	lui	s7,0x1
+20003dec:	01697933          	and	s2,s2,s6
+20003df0:	6b41                	lui	s6,0x10
+20003df2:	fff98793          	addi	a5,s3,-1 # fff <_data_lma+0xc7>
+20003df6:	0127f7b3          	and	a5,a5,s2
+20003dfa:	e399                	bnez	a5,20003e00 <FLASH_EEPROM_CMD+0x158>
+20003dfc:	0134fc63          	bgeu	s1,s3,20003e14 <FLASH_EEPROM_CMD+0x16c>
+20003e00:	0049d993          	srli	s3,s3,0x4
+20003e04:	47c1                	li	a5,16
+20003e06:	ff37e6e3          	bltu	a5,s3,20003df2 <FLASH_EEPROM_CMD+0x14a>
+20003e0a:	bf99                	j	20003d60 <FLASH_EEPROM_CMD+0xb8>
+20003e0c:	6905                	lui	s2,0x1
+20003e0e:	69c1                	lui	s3,0x10
+20003e10:	197d                	addi	s2,s2,-1
+20003e12:	b7d9                	j	20003dd8 <FLASH_EEPROM_CMD+0x130>
+20003e14:	0d800513          	li	a0,216
+20003e18:	01698863          	beq	s3,s6,20003e28 <FLASH_EEPROM_CMD+0x180>
+20003e1c:	02000513          	li	a0,32
+20003e20:	01798463          	beq	s3,s7,20003e28 <FLASH_EEPROM_CMD+0x180>
+20003e24:	08100513          	li	a0,129
+20003e28:	85ca                	mv	a1,s2
+20003e2a:	3bfd                	jal	20003c28 <FLASH_ROM_ADDR>
+20003e2c:	3591                	jal	20003c70 <FLASH_ROM_WAIT>
+20003e2e:	dd21                	beqz	a0,20003d86 <FLASH_EEPROM_CMD+0xde>
+20003e30:	994e                	add	s2,s2,s3
+20003e32:	413484b3          	sub	s1,s1,s3
+20003e36:	b7d9                	j	20003dfc <FLASH_EEPROM_CMD+0x154>
+20003e38:	85da                	mv	a1,s6
+20003e3a:	452d                	li	a0,11
+20003e3c:	33f5                	jal	20003c28 <FLASH_ROM_ADDR>
+20003e3e:	94ca                	add	s1,s1,s2
+20003e40:	f29900e3          	beq	s2,s1,20003d60 <FLASH_EEPROM_CMD+0xb8>
+20003e44:	0905                	addi	s2,s2,1
+20003e46:	33d9                	jal	20003c0c <FLASH_ROM_IN>
+20003e48:	fea90fa3          	sb	a0,-1(s2) # fff <_data_lma+0xc7>
+20003e4c:	bfd5                	j	20003e40 <FLASH_EEPROM_CMD+0x198>
+20003e4e:	fff98793          	addi	a5,s3,-1 # ffff <_data_lma+0xf0c7>
+20003e52:	0ff7f793          	andi	a5,a5,255
+20003e56:	08fc6c63          	bltu	s8,a5,20003eee <.loop401+0x54>
+20003e5a:	045cc703          	lbu	a4,69(s9)
+20003e5e:	000807b7          	lui	a5,0x80
+20003e62:	02077713          	andi	a4,a4,32
+20003e66:	e319                	bnez	a4,20003e6c <FLASH_EEPROM_CMD+0x1c4>
+20003e68:	000787b7          	lui	a5,0x78
+20003e6c:	5579                	li	a0,-2
+20003e6e:	f0fb7de3          	bgeu	s6,a5,20003d88 <FLASH_EEPROM_CMD+0xe0>
+20003e72:	009b0733          	add	a4,s6,s1
+20003e76:	f0e7e9e3          	bltu	a5,a4,20003d88 <FLASH_EEPROM_CMD+0xe0>
+20003e7a:	4789                	li	a5,2
+20003e7c:	04f99063          	bne	s3,a5,20003ebc <.loop401+0x22>
+20003e80:	8089                	srli	s1,s1,0x2
+20003e82:	49d5                	li	s3,21
+20003e84:	ec048ee3          	beqz	s1,20003d60 <FLASH_EEPROM_CMD+0xb8>
+20003e88:	85da                	mv	a1,s6
+20003e8a:	4509                	li	a0,2
+20003e8c:	3b71                	jal	20003c28 <FLASH_ROM_ADDR>
+20003e8e:	0911                	addi	s2,s2,4
+20003e90:	ffc92703          	lw	a4,-4(s2)
+20003e94:	4791                	li	a5,4
+20003e96:	80e42023          	sw	a4,-2048(s0)
+
+20003e9a <.loop401>:
+20003e9a:	80640703          	lb	a4,-2042(s0)
+20003e9e:	fe074ee3          	bltz	a4,20003e9a <.loop401>
+20003ea2:	81340323          	sb	s3,-2042(s0)
+20003ea6:	17fd                	addi	a5,a5,-1
+20003ea8:	fbed                	bnez	a5,20003e9a <.loop401>
+20003eaa:	14fd                	addi	s1,s1,-1
+20003eac:	0b11                	addi	s6,s6,4
+20003eae:	c481                	beqz	s1,20003eb6 <.loop401+0x1c>
+20003eb0:	0ffb7793          	andi	a5,s6,255
+20003eb4:	ffe9                	bnez	a5,20003e8e <FLASH_EEPROM_CMD+0x1e6>
+20003eb6:	3b6d                	jal	20003c70 <FLASH_ROM_WAIT>
+20003eb8:	f571                	bnez	a0,20003e84 <FLASH_EEPROM_CMD+0x1dc>
+20003eba:	b5f1                	j	20003d86 <FLASH_EEPROM_CMD+0xde>
+20003ebc:	4785                	li	a5,1
+20003ebe:	f4f987e3          	beq	s3,a5,20003e0c <FLASH_EEPROM_CMD+0x164>
+20003ec2:	85da                	mv	a1,s6
+20003ec4:	452d                	li	a0,11
+20003ec6:	338d                	jal	20003c28 <FLASH_ROM_ADDR>
+20003ec8:	fff48993          	addi	s3,s1,-1 # 7ffff <_data_lma+0x7f0c7>
+20003ecc:	e8048ae3          	beqz	s1,20003d60 <FLASH_EEPROM_CMD+0xb8>
+20003ed0:	3b35                	jal	20003c0c <FLASH_ROM_IN>
+20003ed2:	0039f793          	andi	a5,s3,3
+20003ed6:	eb91                	bnez	a5,20003eea <.loop401+0x50>
+20003ed8:	80042683          	lw	a3,-2048(s0)
+20003edc:	00092703          	lw	a4,0(s2)
+20003ee0:	00490793          	addi	a5,s2,4
+20003ee4:	e6e69fe3          	bne	a3,a4,20003d62 <FLASH_EEPROM_CMD+0xba>
+20003ee8:	893e                	mv	s2,a5
+20003eea:	84ce                	mv	s1,s3
+20003eec:	bff1                	j	20003ec8 <.loop401+0x2e>
+20003eee:	47b5                	li	a5,13
+20003ef0:	00f99663          	bne	s3,a5,20003efc <.loop401+0x62>
+20003ef4:	0b900513          	li	a0,185
+20003ef8:	39d5                	jal	20003bec <FLASH_ROM_BEG>
+20003efa:	b59d                	j	20003d60 <FLASH_EEPROM_CMD+0xb8>
+20003efc:	47b1                	li	a5,12
+20003efe:	0ab00513          	li	a0,171
+20003f02:	fef98be3          	beq	s3,a5,20003ef8 <.loop401+0x5e>
+20003f06:	4799                	li	a5,6
+20003f08:	02f99e63          	bne	s3,a5,20003f44 <.loop401+0xaa>
+20003f0c:	85da                	mv	a1,s6
+20003f0e:	452d                	li	a0,11
+20003f10:	3b21                	jal	20003c28 <FLASH_ROM_ADDR>
+20003f12:	4481                	li	s1,0
+20003f14:	4b8d                	li	s7,3
+20003f16:	49a1                	li	s3,8
+20003f18:	39d5                	jal	20003c0c <FLASH_ROM_IN>
+20003f1a:	01749663          	bne	s1,s7,20003f26 <.loop401+0x8c>
+20003f1e:	80042783          	lw	a5,-2048(s0)
+20003f22:	00f92023          	sw	a5,0(s2)
+20003f26:	0485                	addi	s1,s1,1
+20003f28:	ff3498e3          	bne	s1,s3,20003f18 <.loop401+0x7e>
+20003f2c:	80042783          	lw	a5,-2048(s0)
+20003f30:	012b1713          	slli	a4,s6,0x12
+20003f34:	00075563          	bgez	a4,20003f3e <.loop401+0xa4>
+20003f38:	00f91223          	sh	a5,4(s2)
+20003f3c:	b515                	j	20003d60 <FLASH_EEPROM_CMD+0xb8>
+20003f3e:	00f92223          	sw	a5,4(s2)
+20003f42:	bd39                	j	20003d60 <FLASH_EEPROM_CMD+0xb8>
+20003f44:	479d                	li	a5,7
+20003f46:	02f99963          	bne	s3,a5,20003f78 <.loop401+0xde>
+20003f4a:	4581                	li	a1,0
+20003f4c:	04b00513          	li	a0,75
+20003f50:	39e1                	jal	20003c28 <FLASH_ROM_ADDR>
+20003f52:	44bd                	li	s1,15
+20003f54:	00092023          	sw	zero,0(s2)
+20003f58:	00092223          	sw	zero,4(s2)
+20003f5c:	59fd                	li	s3,-1
+20003f5e:	317d                	jal	20003c0c <FLASH_ROM_IN>
+20003f60:	0074f793          	andi	a5,s1,7
+20003f64:	97ca                	add	a5,a5,s2
+20003f66:	0007c703          	lbu	a4,0(a5) # 78000 <_data_lma+0x770c8>
+20003f6a:	14fd                	addi	s1,s1,-1
+20003f6c:	8d39                	xor	a0,a0,a4
+20003f6e:	00a78023          	sb	a0,0(a5)
+20003f72:	ff3496e3          	bne	s1,s3,20003f5e <.loop401+0xc4>
+20003f76:	b3ed                	j	20003d60 <FLASH_EEPROM_CMD+0xb8>
+20003f78:	47a1                	li	a5,8
+20003f7a:	04f99263          	bne	s3,a5,20003fbe <.loop401+0x124>
+20003f7e:	39cd                	jal	20003c70 <FLASH_ROM_WAIT>
+20003f80:	4481                	li	s1,0
+20003f82:	000b0d63          	beqz	s6,20003f9c <.loop401+0x102>
+20003f86:	478d                	li	a5,3
+20003f88:	03c00493          	li	s1,60
+20003f8c:	00fb0863          	beq	s6,a5,20003f9c <.loop401+0x102>
+20003f90:	05000493          	li	s1,80
+20003f94:	018b0463          	beq	s6,s8,20003f9c <.loop401+0x102>
+20003f98:	04400493          	li	s1,68
+20003f9c:	07c57513          	andi	a0,a0,124
+20003fa0:	dc9500e3          	beq	a0,s1,20003d60 <FLASH_EEPROM_CMD+0xb8>
+20003fa4:	4519                	li	a0,6
+20003fa6:	3199                	jal	20003bec <FLASH_ROM_BEG>
+20003fa8:	3999                	jal	20003bfe <FLASH_ROM_END>
+20003faa:	4505                	li	a0,1
+20003fac:	3181                	jal	20003bec <FLASH_ROM_BEG>
+20003fae:	8526                	mv	a0,s1
+20003fb0:	31ad                	jal	20003c1a <FLASH_ROM_OUT>
+20003fb2:	4509                	li	a0,2
+20003fb4:	319d                	jal	20003c1a <FLASH_ROM_OUT>
+20003fb6:	396d                	jal	20003c70 <FLASH_ROM_WAIT>
+20003fb8:	da0514e3          	bnez	a0,20003d60 <FLASH_EEPROM_CMD+0xb8>
+20003fbc:	b3e9                	j	20003d86 <FLASH_EEPROM_CMD+0xde>
+20003fbe:	4791                	li	a5,4
+20003fc0:	00f99963          	bne	s3,a5,20003fd2 <.loop401+0x138>
+20003fc4:	06600513          	li	a0,102
+20003fc8:	3115                	jal	20003bec <FLASH_ROM_BEG>
+20003fca:	3915                	jal	20003bfe <FLASH_ROM_END>
+20003fcc:	09900513          	li	a0,153
+20003fd0:	b725                	j	20003ef8 <.loop401+0x5e>
+20003fd2:	d80987e3          	beqz	s3,20003d60 <FLASH_EEPROM_CMD+0xb8>
+20003fd6:	54f1                	li	s1,-4
+20003fd8:	b369                	j	20003d62 <FLASH_EEPROM_CMD+0xba>
+	...
+
+Disassembly of section .text:
+
+000007e0 <handle_reset>:
+handle_reset():
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:116
+	.weak	handle_reset
+	.align	1
+handle_reset:
+.option push 
+.option	norelax 
+	la gp, __global_pointer$
+ 7e0:	20004197          	auipc	gp,0x20004
+ 7e4:	03818193          	addi	gp,gp,56 # 20004818 <__global_pointer$>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:119
+.option	pop 
+1:
+	la sp, _eusrstack 
+ 7e8:	20008117          	auipc	sp,0x20008
+ 7ec:	81810113          	addi	sp,sp,-2024 # 20008000 <_eusrstack>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:123
+
+/* Load highcode code  section from flash to RAM */
+2:
+    la a0, _highcode_lma
+ 7f0:	00400513          	li	a0,4
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:124
+    la a1, _highcode_vma_start
+ 7f4:	20003597          	auipc	a1,0x20003
+ 7f8:	00c58593          	addi	a1,a1,12 # 20003800 <_highcode_vma_start>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:125
+    la a2, _highcode_vma_end
+ 7fc:	20003617          	auipc	a2,0x20003
+ 800:	7e060613          	addi	a2,a2,2016 # 20003fdc <_highcode_vma_end>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:126
+    bgeu a1, a2, 2f
+ 804:	00c5fa63          	bgeu	a1,a2,818 <handle_reset+0x38>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:128
+1:
+    lw t0, (a0)
+ 808:	00052283          	lw	t0,0(a0)
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:129
+    sw t0, (a1)
+ 80c:	0055a023          	sw	t0,0(a1)
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:130
+    addi a0, a0, 4
+ 810:	0511                	addi	a0,a0,4
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:131
+    addi a1, a1, 4
+ 812:	0591                	addi	a1,a1,4
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:132
+    bltu a1, a2, 1b
+ 814:	fec5eae3          	bltu	a1,a2,808 <handle_reset+0x28>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:136
+
+/* Load data section from flash to RAM */
+2:
+	la a0, _data_lma
+ 818:	00000517          	auipc	a0,0x0
+ 81c:	72050513          	addi	a0,a0,1824 # f38 <_data_lma>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:137
+	la a1, _data_vma
+ 820:	20003597          	auipc	a1,0x20003
+ 824:	7e058593          	addi	a1,a1,2016 # 20004000 <plate_false>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:138
+	la a2, _edata
+ 828:	20003617          	auipc	a2,0x20003
+ 82c:	7f060613          	addi	a2,a2,2032 # 20004018 <_edata>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:139
+	bgeu a1, a2, 2f
+ 830:	00c5fa63          	bgeu	a1,a2,844 <handle_reset+0x64>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:141
+1:
+	lw t0, (a0)
+ 834:	00052283          	lw	t0,0(a0)
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:142
+	sw t0, (a1)
+ 838:	0055a023          	sw	t0,0(a1)
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:143
+	addi a0, a0, 4
+ 83c:	0511                	addi	a0,a0,4
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:144
+	addi a1, a1, 4
+ 83e:	0591                	addi	a1,a1,4
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:145
+	bltu a1, a2, 1b
+ 840:	fec5eae3          	bltu	a1,a2,834 <handle_reset+0x54>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:148
+2:
+	/* clear bss section */
+	la a0, _sbss
+ 844:	20003517          	auipc	a0,0x20003
+ 848:	7d450513          	addi	a0,a0,2004 # 20004018 <_edata>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:149
+	la a1, _ebss
+ 84c:	83c18593          	addi	a1,gp,-1988 # 20004054 <_ebss>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:150
+	bgeu a0, a1, 2f
+ 850:	00b57763          	bgeu	a0,a1,85e <handle_reset+0x7e>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:152
+1:
+	sw zero, (a0)
+ 854:	00052023          	sw	zero,0(a0)
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:153
+	addi a0, a0, 4
+ 858:	0511                	addi	a0,a0,4
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:154
+	bltu a0, a1, 1b
+ 85a:	feb56de3          	bltu	a0,a1,854 <handle_reset+0x74>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:156
+2:
+    li t0, 0x88
+ 85e:	08800293          	li	t0,136
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:157
+    csrs mstatus, t0
+ 862:	3002a073          	csrs	mstatus,t0
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:158
+	la t0, _vector_base
+ 866:	20003297          	auipc	t0,0x20003
+ 86a:	f9a28293          	addi	t0,t0,-102 # 20003800 <_highcode_vma_start>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:159
+    ori t0, t0, 1
+ 86e:	0012e293          	ori	t0,t0,1
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:160
+	csrw mtvec, t0
+ 872:	30529073          	csrw	mtvec,t0
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:161
+	la t0, main
+ 876:	00000297          	auipc	t0,0x0
+ 87a:	0b828293          	addi	t0,t0,184 # 92e <main>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:162
+	csrw mepc, t0
+ 87e:	34129073          	csrw	mepc,t0
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/Startup/startup_CH573.S:169
+	/* enable vector relocation
+	li t0, 0xE000ED14
+	li t1, 1
+	sw t1, 0(t0)*/
+	
+	mret
+ 882:	30200073          	mret
+
+00000886 <memset>:
+memset():
+ 886:	433d                	li	t1,15
+ 888:	872a                	mv	a4,a0
+ 88a:	02c37363          	bgeu	t1,a2,8b0 <memset+0x2a>
+ 88e:	00f77793          	andi	a5,a4,15
+ 892:	efbd                	bnez	a5,910 <memset+0x8a>
+ 894:	e5ad                	bnez	a1,8fe <memset+0x78>
+ 896:	ff067693          	andi	a3,a2,-16
+ 89a:	8a3d                	andi	a2,a2,15
+ 89c:	96ba                	add	a3,a3,a4
+ 89e:	c30c                	sw	a1,0(a4)
+ 8a0:	c34c                	sw	a1,4(a4)
+ 8a2:	c70c                	sw	a1,8(a4)
+ 8a4:	c74c                	sw	a1,12(a4)
+ 8a6:	0741                	addi	a4,a4,16
+ 8a8:	fed76be3          	bltu	a4,a3,89e <memset+0x18>
+ 8ac:	e211                	bnez	a2,8b0 <memset+0x2a>
+ 8ae:	8082                	ret
+ 8b0:	40c306b3          	sub	a3,t1,a2
+ 8b4:	068a                	slli	a3,a3,0x2
+ 8b6:	00000297          	auipc	t0,0x0
+ 8ba:	9696                	add	a3,a3,t0
+ 8bc:	00a68067          	jr	10(a3)
+ 8c0:	00b70723          	sb	a1,14(a4) # 7800e <_data_lma+0x770d6>
+ 8c4:	00b706a3          	sb	a1,13(a4)
+ 8c8:	00b70623          	sb	a1,12(a4)
+ 8cc:	00b705a3          	sb	a1,11(a4)
+ 8d0:	00b70523          	sb	a1,10(a4)
+ 8d4:	00b704a3          	sb	a1,9(a4)
+ 8d8:	00b70423          	sb	a1,8(a4)
+ 8dc:	00b703a3          	sb	a1,7(a4)
+ 8e0:	00b70323          	sb	a1,6(a4)
+ 8e4:	00b702a3          	sb	a1,5(a4)
+ 8e8:	00b70223          	sb	a1,4(a4)
+ 8ec:	00b701a3          	sb	a1,3(a4)
+ 8f0:	00b70123          	sb	a1,2(a4)
+ 8f4:	00b700a3          	sb	a1,1(a4)
+ 8f8:	00b70023          	sb	a1,0(a4)
+ 8fc:	8082                	ret
+ 8fe:	0ff5f593          	andi	a1,a1,255
+ 902:	00859693          	slli	a3,a1,0x8
+ 906:	8dd5                	or	a1,a1,a3
+ 908:	01059693          	slli	a3,a1,0x10
+ 90c:	8dd5                	or	a1,a1,a3
+ 90e:	b761                	j	896 <memset+0x10>
+ 910:	00279693          	slli	a3,a5,0x2
+ 914:	00000297          	auipc	t0,0x0
+ 918:	9696                	add	a3,a3,t0
+ 91a:	8286                	mv	t0,ra
+ 91c:	fa8680e7          	jalr	-88(a3)
+ 920:	8096                	mv	ra,t0
+ 922:	17c1                	addi	a5,a5,-16
+ 924:	8f1d                	sub	a4,a4,a5
+ 926:	963e                	add	a2,a2,a5
+ 928:	f8c374e3          	bgeu	t1,a2,8b0 <memset+0x2a>
+ 92c:	b7a5                	j	894 <memset+0xe>
+
+0000092e <main>:
+main():
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:37
+{
+ 92e:	1141                	addi	sp,sp,-16
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:39
+    SetSysClock(CLK_SOURCE_PLL_60MHz);
+ 930:	04800513          	li	a0,72
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:37
+{
+ 934:	c606                	sw	ra,12(sp)
+ 936:	c422                	sw	s0,8(sp)
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:39
+    SetSysClock(CLK_SOURCE_PLL_60MHz);
+ 938:	20003097          	auipc	ra,0x20003
+ 93c:	10c080e7          	jalr	268(ra) # 20003a44 <SetSysClock>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:42
+    GPIOB_SetBits(GPIO_Pin_7);
+ 940:	40001437          	lui	s0,0x40001
+ 944:	0c842783          	lw	a5,200(s0) # 400010c8 <_eusrstack+0x1fff90c8>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:43
+    GPIOB_ModeCfg(GPIO_Pin_4, GPIO_ModeIN_PU);      // RXD0-配置上拉输入
+ 948:	4585                	li	a1,1
+ 94a:	4541                	li	a0,16
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:42
+    GPIOB_SetBits(GPIO_Pin_7);
+ 94c:	0807e793          	ori	a5,a5,128
+ 950:	0cf42423          	sw	a5,200(s0)
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:43
+    GPIOB_ModeCfg(GPIO_Pin_4, GPIO_ModeIN_PU);      // RXD0-配置上拉输入
+ 954:	2449                	jal	bd6 <GPIOB_ModeCfg>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:44
+    GPIOB_ModeCfg(GPIO_Pin_7, GPIO_ModeOut_PP_5mA); // TXD0-配置推挽输出，注意先让IO口输出高电
+ 956:	458d                	li	a1,3
+ 958:	08000513          	li	a0,128
+ 95c:	2cad                	jal	bd6 <GPIOB_ModeCfg>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:45
+    UART0_DefInit();  //初始化默认配置，波特率115200
+ 95e:	2e41                	jal	cee <UART0_DefInit>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:48
+    GPIOA_SetBits(GPIO_Pin_9);
+ 960:	0a842783          	lw	a5,168(s0)
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:49
+    GPIOA_ModeCfg(GPIO_Pin_8, GPIO_ModeIN_PU);      // RXD-配置上拉输入
+ 964:	4585                	li	a1,1
+ 966:	10000513          	li	a0,256
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:48
+    GPIOA_SetBits(GPIO_Pin_9);
+ 96a:	2007e793          	ori	a5,a5,512
+ 96e:	0af42423          	sw	a5,168(s0)
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:49
+    GPIOA_ModeCfg(GPIO_Pin_8, GPIO_ModeIN_PU);      // RXD-配置上拉输入
+ 972:	2a7d                	jal	b30 <GPIOA_ModeCfg>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:50
+    GPIOA_ModeCfg(GPIO_Pin_9, GPIO_ModeOut_PP_5mA); // TXD-配置推挽输出，注意先让IO口输出高电平
+ 974:	458d                	li	a1,3
+ 976:	20000513          	li	a0,512
+ 97a:	2a5d                	jal	b30 <GPIOA_ModeCfg>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:51
+    UART1_DefInit();
+ 97c:	2181                	jal	dbc <UART1_DefInit>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:53
+    UART0_ByteTrigCfg(UART_1BYTE_TRIG);                      //触发方式为 1BYTE_TRIG（1字节触发）
+ 97e:	4501                	li	a0,0
+ 980:	2645                	jal	d20 <UART0_ByteTrigCfg>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:54
+    UART0_INTCfg(ENABLE, RB_IER_RECV_RDY | RB_IER_LINE_STAT);//设置了接收就绪（RECV_RDY）和线路状态（LINE_STAT）中断，以便在接收到数据或线路状态发生变化时接收中断。
+ 982:	4595                	li	a1,5
+ 984:	4505                	li	a0,1
+ 986:	2e55                	jal	d3a <UART0_INTCfg>
+PFIC_EnableIRQ():
+E:\chelou\CH573\EVTEVT\EVT\EXAM\SRC\RVMSIS/core_riscv.h:99
+ *
+ * @param   IRQn    - Interrupt Numbers
+ */
+RV_STATIC_INLINE void PFIC_EnableIRQ(IRQn_Type IRQn)
+{
+    PFIC->IENR[((uint32_t)(IRQn) >> 5)] = (1 << ((uint32_t)(IRQn)&0x1F));
+ 988:	040007b7          	lui	a5,0x4000
+ 98c:	e000e437          	lui	s0,0xe000e
+ 990:	10f42023          	sw	a5,256(s0) # e000e100 <_eusrstack+0xc0006100>
+main():
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:57
+    UART1_ByteTrigCfg(UART_1BYTE_TRIG);
+ 994:	4501                	li	a0,0
+ 996:	29a1                	jal	dee <UART1_ByteTrigCfg>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:58
+    UART1_INTCfg(ENABLE, RB_IER_RECV_RDY | RB_IER_LINE_STAT);
+ 998:	4595                	li	a1,5
+ 99a:	4505                	li	a0,1
+ 99c:	21b5                	jal	e08 <UART1_INTCfg>
+PFIC_EnableIRQ():
+E:\chelou\CH573\EVTEVT\EVT\EXAM\SRC\RVMSIS/core_riscv.h:99
+ 99e:	080007b7          	lui	a5,0x8000
+ 9a2:	10f42023          	sw	a5,256(s0)
+main():
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231224\obj/../src/Main.c:67 (discriminator 1)
+    }
+ 9a6:	a001                	j	9a6 <main+0x78>
+
+000009a8 <OpmvDataGet>:
+OpmvDataGet():
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:13
+ 9a8:	80b1c783          	lbu	a5,-2037(gp) # 20004023 <state>
+ 9ac:	ef89                	bnez	a5,9c6 <OpmvDataGet+0x1e>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:13 (discriminator 1)
+ 9ae:	0aa00793          	li	a5,170
+ 9b2:	16f51e63          	bne	a0,a5,b2e <OpmvDataGet+0x186>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:15
+ 9b6:	faa00793          	li	a5,-86
+ 9ba:	80f18e23          	sb	a5,-2020(gp) # 20004034 <my_re_buf1>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:16
+ 9be:	4785                	li	a5,1
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:20
+ 9c0:	80f185a3          	sb	a5,-2037(gp) # 20004023 <state>
+ 9c4:	8082                	ret
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:18
+ 9c6:	4705                	li	a4,1
+ 9c8:	00e79863          	bne	a5,a4,9d8 <OpmvDataGet+0x30>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:18 (discriminator 1)
+ 9cc:	0ff00793          	li	a5,255
+ 9d0:	14f51f63          	bne	a0,a5,b2e <OpmvDataGet+0x186>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:20
+ 9d4:	4789                	li	a5,2
+ 9d6:	b7ed                	j	9c0 <OpmvDataGet+0x18>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:22
+ 9d8:	4709                	li	a4,2
+ 9da:	00e79863          	bne	a5,a4,9ea <OpmvDataGet+0x42>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:22 (discriminator 1)
+ 9de:	0f100793          	li	a5,241
+ 9e2:	14f51663          	bne	a0,a5,b2e <OpmvDataGet+0x186>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:24
+ 9e6:	478d                	li	a5,3
+ 9e8:	bfe1                	j	9c0 <OpmvDataGet+0x18>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:26
+ 9ea:	470d                	li	a4,3
+ 9ec:	00e79763          	bne	a5,a4,9fa <OpmvDataGet+0x52>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:26 (discriminator 1)
+ 9f0:	47c5                	li	a5,17
+ 9f2:	12f51e63          	bne	a0,a5,b2e <OpmvDataGet+0x186>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:28
+ 9f6:	4791                	li	a5,4
+ 9f8:	b7e1                	j	9c0 <OpmvDataGet+0x18>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:30
+ 9fa:	4711                	li	a4,4
+ 9fc:	00e79b63          	bne	a5,a4,a12 <OpmvDataGet+0x6a>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:30 (discriminator 1)
+ a00:	47c5                	li	a5,17
+ a02:	12f50663          	beq	a0,a5,b2e <OpmvDataGet+0x186>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:32
+ a06:	4795                	li	a5,5
+ a08:	80f185a3          	sb	a5,-2037(gp) # 20004023 <state>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:33
+ a0c:	82a18823          	sb	a0,-2000(gp) # 20004048 <openmvdata>
+ a10:	8082                	ret
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:35
+ a12:	4715                	li	a4,5
+ a14:	00e79b63          	bne	a5,a4,a2a <OpmvDataGet+0x82>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:35 (discriminator 1)
+ a18:	47c5                	li	a5,17
+ a1a:	10f50a63          	beq	a0,a5,b2e <OpmvDataGet+0x186>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:37
+ a1e:	4799                	li	a5,6
+ a20:	80f185a3          	sb	a5,-2037(gp) # 20004023 <state>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:38
+ a24:	82a188a3          	sb	a0,-1999(gp) # 20004049 <openmvdata+0x1>
+ a28:	8082                	ret
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:40
+ a2a:	4719                	li	a4,6
+ a2c:	00e79b63          	bne	a5,a4,a42 <OpmvDataGet+0x9a>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:40 (discriminator 1)
+ a30:	47c5                	li	a5,17
+ a32:	0ef50e63          	beq	a0,a5,b2e <OpmvDataGet+0x186>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:42
+ a36:	479d                	li	a5,7
+ a38:	80f185a3          	sb	a5,-2037(gp) # 20004023 <state>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:43
+ a3c:	82a18923          	sb	a0,-1998(gp) # 2000404a <openmvdata+0x2>
+ a40:	8082                	ret
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:45
+ a42:	471d                	li	a4,7
+ a44:	00e79b63          	bne	a5,a4,a5a <OpmvDataGet+0xb2>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:45 (discriminator 1)
+ a48:	47c5                	li	a5,17
+ a4a:	0ef50263          	beq	a0,a5,b2e <OpmvDataGet+0x186>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:47
+ a4e:	47a1                	li	a5,8
+ a50:	80f185a3          	sb	a5,-2037(gp) # 20004023 <state>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:48
+ a54:	82a189a3          	sb	a0,-1997(gp) # 2000404b <openmvdata+0x3>
+ a58:	8082                	ret
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:50
+ a5a:	4721                	li	a4,8
+ a5c:	00e79b63          	bne	a5,a4,a72 <OpmvDataGet+0xca>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:50 (discriminator 1)
+ a60:	47c5                	li	a5,17
+ a62:	0cf50663          	beq	a0,a5,b2e <OpmvDataGet+0x186>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:52
+ a66:	47a5                	li	a5,9
+ a68:	80f185a3          	sb	a5,-2037(gp) # 20004023 <state>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:53
+ a6c:	82a18a23          	sb	a0,-1996(gp) # 2000404c <openmvdata+0x4>
+ a70:	8082                	ret
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:55
+ a72:	4725                	li	a4,9
+ a74:	00e79b63          	bne	a5,a4,a8a <OpmvDataGet+0xe2>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:55 (discriminator 1)
+ a78:	47c5                	li	a5,17
+ a7a:	0af50a63          	beq	a0,a5,b2e <OpmvDataGet+0x186>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:57
+ a7e:	47a9                	li	a5,10
+ a80:	80f185a3          	sb	a5,-2037(gp) # 20004023 <state>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:58
+ a84:	82a18aa3          	sb	a0,-1995(gp) # 2000404d <openmvdata+0x5>
+ a88:	8082                	ret
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:60
+ a8a:	4729                	li	a4,10
+ a8c:	00e79b63          	bne	a5,a4,aa2 <OpmvDataGet+0xfa>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:60 (discriminator 1)
+ a90:	47c5                	li	a5,17
+ a92:	08f50e63          	beq	a0,a5,b2e <OpmvDataGet+0x186>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:62
+ a96:	47ad                	li	a5,11
+ a98:	80f185a3          	sb	a5,-2037(gp) # 20004023 <state>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:63
+ a9c:	82a18b23          	sb	a0,-1994(gp) # 2000404e <openmvdata+0x6>
+ aa0:	8082                	ret
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:65
+ aa2:	472d                	li	a4,11
+ aa4:	00e79b63          	bne	a5,a4,aba <OpmvDataGet+0x112>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:65 (discriminator 1)
+ aa8:	47c5                	li	a5,17
+ aaa:	08f50263          	beq	a0,a5,b2e <OpmvDataGet+0x186>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:67
+ aae:	47b1                	li	a5,12
+ ab0:	80f185a3          	sb	a5,-2037(gp) # 20004023 <state>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:68
+ ab4:	82a18ba3          	sb	a0,-1993(gp) # 2000404f <openmvdata+0x7>
+ ab8:	8082                	ret
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:70
+ aba:	4731                	li	a4,12
+ abc:	00e79b63          	bne	a5,a4,ad2 <OpmvDataGet+0x12a>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:70 (discriminator 1)
+ ac0:	47c5                	li	a5,17
+ ac2:	06f50663          	beq	a0,a5,b2e <OpmvDataGet+0x186>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:72
+ ac6:	47b5                	li	a5,13
+ ac8:	80f185a3          	sb	a5,-2037(gp) # 20004023 <state>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:73
+ acc:	82a18c23          	sb	a0,-1992(gp) # 20004050 <openmvdata+0x8>
+ ad0:	8082                	ret
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:75
+ ad2:	4735                	li	a4,13
+ ad4:	00e79b63          	bne	a5,a4,aea <OpmvDataGet+0x142>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:75 (discriminator 1)
+ ad8:	47c5                	li	a5,17
+ ada:	04f50a63          	beq	a0,a5,b2e <OpmvDataGet+0x186>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:77
+ ade:	47b9                	li	a5,14
+ ae0:	80f185a3          	sb	a5,-2037(gp) # 20004023 <state>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:78
+ ae4:	80a18623          	sb	a0,-2036(gp) # 20004024 <suma>
+ ae8:	8082                	ret
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:80
+ aea:	4739                	li	a4,14
+ aec:	00e79b63          	bne	a5,a4,b02 <OpmvDataGet+0x15a>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:80 (discriminator 1)
+ af0:	47c5                	li	a5,17
+ af2:	02f50e63          	beq	a0,a5,b2e <OpmvDataGet+0x186>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:82
+ af6:	47bd                	li	a5,15
+ af8:	80f185a3          	sb	a5,-2037(gp) # 20004023 <state>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:83
+ afc:	80a186a3          	sb	a0,-2035(gp) # 20004025 <sumb>
+ b00:	8082                	ret
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:85
+ b02:	473d                	li	a4,15
+ b04:	00e79b63          	bne	a5,a4,b1a <OpmvDataGet+0x172>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:85 (discriminator 1)
+ b08:	47c5                	li	a5,17
+ b0a:	02f50263          	beq	a0,a5,b2e <OpmvDataGet+0x186>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:87
+ b0e:	47c1                	li	a5,16
+ b10:	80f185a3          	sb	a5,-2037(gp) # 20004023 <state>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:88
+ b14:	80a18423          	sb	a0,-2040(gp) # 20004020 <plate_firstMark>
+ b18:	8082                	ret
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:90
+ b1a:	4741                	li	a4,16
+ b1c:	00e79963          	bne	a5,a4,b2e <OpmvDataGet+0x186>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:90 (discriminator 1)
+ b20:	47c5                	li	a5,17
+ b22:	00f50663          	beq	a0,a5,b2e <OpmvDataGet+0x186>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:92
+ b26:	800185a3          	sb	zero,-2037(gp) # 20004023 <state>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:93
+ b2a:	80a184a3          	sb	a0,-2039(gp) # 20004021 <plate_firstMark+0x1>
+E:\chelou\CH573\EVTEVT\EVT\EXAM\UART20231222\obj/../src/openmv.c:96
+ b2e:	8082                	ret
+
+00000b30 <GPIOA_ModeCfg>:
+GPIOA_ModeCfg():
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_gpio.c:27
+ *
+ * @return  none
+ */
+void GPIOA_ModeCfg(uint32_t pin, GPIOModeTypeDef mode)
+{
+    switch(mode)
+ b30:	4791                	li	a5,4
+ b32:	02b7ee63          	bltu	a5,a1,b6e <GPIOA_ModeCfg+0x3e>
+ b36:	00000717          	auipc	a4,0x0
+ b3a:	3da70713          	addi	a4,a4,986 # f10 <memcpy+0xb6>
+ b3e:	058a                	slli	a1,a1,0x2
+ b40:	95ba                	add	a1,a1,a4
+ b42:	419c                	lw	a5,0(a1)
+ b44:	97ba                	add	a5,a5,a4
+ b46:	8782                	jr	a5
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_gpio.c:30
+    {
+        case GPIO_ModeIN_Floating:
+            R32_PA_PD_DRV &= ~pin;
+ b48:	400017b7          	lui	a5,0x40001
+ b4c:	0b47a703          	lw	a4,180(a5) # 400010b4 <_eusrstack+0x1fff90b4>
+ b50:	fff54513          	not	a0,a0
+ b54:	8f69                	and	a4,a4,a0
+ b56:	0ae7aa23          	sw	a4,180(a5)
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_gpio.c:31
+            R32_PA_PU &= ~pin;
+ b5a:	0b07a703          	lw	a4,176(a5)
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_gpio.c:43
+            R32_PA_DIR &= ~pin;
+            break;
+
+        case GPIO_ModeIN_PD:
+            R32_PA_PD_DRV |= pin;
+            R32_PA_PU &= ~pin;
+ b5e:	8f69                	and	a4,a4,a0
+ b60:	0ae7a823          	sw	a4,176(a5)
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_gpio.c:44
+            R32_PA_DIR &= ~pin;
+ b64:	0a07a703          	lw	a4,160(a5)
+ b68:	8d79                	and	a0,a0,a4
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_gpio.c:54
+            R32_PA_DIR |= pin;
+            break;
+
+        case GPIO_ModeOut_PP_20mA:
+            R32_PA_PD_DRV |= pin;
+            R32_PA_DIR |= pin;
+ b6a:	0aa7a023          	sw	a0,160(a5)
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_gpio.c:60
+            break;
+
+        default:
+            break;
+    }
+}
+ b6e:	8082                	ret
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_gpio.c:36
+            R32_PA_PD_DRV &= ~pin;
+ b70:	400017b7          	lui	a5,0x40001
+ b74:	0b47a683          	lw	a3,180(a5) # 400010b4 <_eusrstack+0x1fff90b4>
+ b78:	fff54713          	not	a4,a0
+ b7c:	8ef9                	and	a3,a3,a4
+ b7e:	0ad7aa23          	sw	a3,180(a5)
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_gpio.c:37
+            R32_PA_PU |= pin;
+ b82:	0b07a683          	lw	a3,176(a5)
+ b86:	8d55                	or	a0,a0,a3
+ b88:	0aa7a823          	sw	a0,176(a5)
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_gpio.c:38
+            R32_PA_DIR &= ~pin;
+ b8c:	0a07a683          	lw	a3,160(a5)
+ b90:	8f75                	and	a4,a4,a3
+ b92:	0ae7a023          	sw	a4,160(a5)
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_gpio.c:39
+            break;
+ b96:	8082                	ret
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_gpio.c:42
+            R32_PA_PD_DRV |= pin;
+ b98:	400017b7          	lui	a5,0x40001
+ b9c:	0b47a703          	lw	a4,180(a5) # 400010b4 <_eusrstack+0x1fff90b4>
+ ba0:	8f49                	or	a4,a4,a0
+ ba2:	0ae7aa23          	sw	a4,180(a5)
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_gpio.c:43
+            R32_PA_PU &= ~pin;
+ ba6:	0b07a703          	lw	a4,176(a5)
+ baa:	fff54513          	not	a0,a0
+ bae:	bf45                	j	b5e <GPIOA_ModeCfg+0x2e>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_gpio.c:48
+            R32_PA_PD_DRV &= ~pin;
+ bb0:	400017b7          	lui	a5,0x40001
+ bb4:	0b47a683          	lw	a3,180(a5) # 400010b4 <_eusrstack+0x1fff90b4>
+ bb8:	fff54713          	not	a4,a0
+ bbc:	8f75                	and	a4,a4,a3
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_gpio.c:53
+            R32_PA_PD_DRV |= pin;
+ bbe:	0ae7aa23          	sw	a4,180(a5)
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_gpio.c:54
+            R32_PA_DIR |= pin;
+ bc2:	0a07a703          	lw	a4,160(a5)
+ bc6:	8d59                	or	a0,a0,a4
+ bc8:	b74d                	j	b6a <GPIOA_ModeCfg+0x3a>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_gpio.c:53
+            R32_PA_PD_DRV |= pin;
+ bca:	400017b7          	lui	a5,0x40001
+ bce:	0b47a703          	lw	a4,180(a5) # 400010b4 <_eusrstack+0x1fff90b4>
+ bd2:	8f49                	or	a4,a4,a0
+ bd4:	b7ed                	j	bbe <GPIOA_ModeCfg+0x8e>
+
+00000bd6 <GPIOB_ModeCfg>:
+GPIOB_ModeCfg():
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_gpio.c:74
+ *
+ * @return  none
+ */
+void GPIOB_ModeCfg(uint32_t pin, GPIOModeTypeDef mode)
+{
+    switch(mode)
+ bd6:	4791                	li	a5,4
+ bd8:	02b7ee63          	bltu	a5,a1,c14 <GPIOB_ModeCfg+0x3e>
+ bdc:	00000717          	auipc	a4,0x0
+ be0:	34870713          	addi	a4,a4,840 # f24 <memcpy+0xca>
+ be4:	058a                	slli	a1,a1,0x2
+ be6:	95ba                	add	a1,a1,a4
+ be8:	419c                	lw	a5,0(a1)
+ bea:	97ba                	add	a5,a5,a4
+ bec:	8782                	jr	a5
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_gpio.c:77
+    {
+        case GPIO_ModeIN_Floating:
+            R32_PB_PD_DRV &= ~pin;
+ bee:	400017b7          	lui	a5,0x40001
+ bf2:	0d47a703          	lw	a4,212(a5) # 400010d4 <_eusrstack+0x1fff90d4>
+ bf6:	fff54513          	not	a0,a0
+ bfa:	8f69                	and	a4,a4,a0
+ bfc:	0ce7aa23          	sw	a4,212(a5)
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_gpio.c:78
+            R32_PB_PU &= ~pin;
+ c00:	0d07a703          	lw	a4,208(a5)
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_gpio.c:90
+            R32_PB_DIR &= ~pin;
+            break;
+
+        case GPIO_ModeIN_PD:
+            R32_PB_PD_DRV |= pin;
+            R32_PB_PU &= ~pin;
+ c04:	8f69                	and	a4,a4,a0
+ c06:	0ce7a823          	sw	a4,208(a5)
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_gpio.c:91
+            R32_PB_DIR &= ~pin;
+ c0a:	0c07a703          	lw	a4,192(a5)
+ c0e:	8d79                	and	a0,a0,a4
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_gpio.c:101
+            R32_PB_DIR |= pin;
+            break;
+
+        case GPIO_ModeOut_PP_20mA:
+            R32_PB_PD_DRV |= pin;
+            R32_PB_DIR |= pin;
+ c10:	0ca7a023          	sw	a0,192(a5)
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_gpio.c:107
+            break;
+
+        default:
+            break;
+    }
+}
+ c14:	8082                	ret
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_gpio.c:83
+            R32_PB_PD_DRV &= ~pin;
+ c16:	400017b7          	lui	a5,0x40001
+ c1a:	0d47a683          	lw	a3,212(a5) # 400010d4 <_eusrstack+0x1fff90d4>
+ c1e:	fff54713          	not	a4,a0
+ c22:	8ef9                	and	a3,a3,a4
+ c24:	0cd7aa23          	sw	a3,212(a5)
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_gpio.c:84
+            R32_PB_PU |= pin;
+ c28:	0d07a683          	lw	a3,208(a5)
+ c2c:	8d55                	or	a0,a0,a3
+ c2e:	0ca7a823          	sw	a0,208(a5)
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_gpio.c:85
+            R32_PB_DIR &= ~pin;
+ c32:	0c07a683          	lw	a3,192(a5)
+ c36:	8f75                	and	a4,a4,a3
+ c38:	0ce7a023          	sw	a4,192(a5)
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_gpio.c:86
+            break;
+ c3c:	8082                	ret
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_gpio.c:89
+            R32_PB_PD_DRV |= pin;
+ c3e:	400017b7          	lui	a5,0x40001
+ c42:	0d47a703          	lw	a4,212(a5) # 400010d4 <_eusrstack+0x1fff90d4>
+ c46:	8f49                	or	a4,a4,a0
+ c48:	0ce7aa23          	sw	a4,212(a5)
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_gpio.c:90
+            R32_PB_PU &= ~pin;
+ c4c:	0d07a703          	lw	a4,208(a5)
+ c50:	fff54513          	not	a0,a0
+ c54:	bf45                	j	c04 <GPIOB_ModeCfg+0x2e>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_gpio.c:95
+            R32_PB_PD_DRV &= ~pin;
+ c56:	400017b7          	lui	a5,0x40001
+ c5a:	0d47a683          	lw	a3,212(a5) # 400010d4 <_eusrstack+0x1fff90d4>
+ c5e:	fff54713          	not	a4,a0
+ c62:	8f75                	and	a4,a4,a3
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_gpio.c:100
+            R32_PB_PD_DRV |= pin;
+ c64:	0ce7aa23          	sw	a4,212(a5)
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_gpio.c:101
+            R32_PB_DIR |= pin;
+ c68:	0c07a703          	lw	a4,192(a5)
+ c6c:	8d59                	or	a0,a0,a4
+ c6e:	b74d                	j	c10 <GPIOB_ModeCfg+0x3a>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_gpio.c:100
+            R32_PB_PD_DRV |= pin;
+ c70:	400017b7          	lui	a5,0x40001
+ c74:	0d47a703          	lw	a4,212(a5) # 400010d4 <_eusrstack+0x1fff90d4>
+ c78:	8f49                	or	a4,a4,a0
+ c7a:	b7ed                	j	c64 <GPIOB_ModeCfg+0x8e>
+
+00000c7c <GetSysClock>:
+GetSysClock():
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:94
+    rev = R16_CLK_SYS_CFG & 0xff;
+ c7c:	400017b7          	lui	a5,0x40001
+ c80:	0087d503          	lhu	a0,8(a5) # 40001008 <_eusrstack+0x1fff9008>
+ c84:	0542                	slli	a0,a0,0x10
+ c86:	8141                	srli	a0,a0,0x10
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:95
+    if((rev & 0x40) == (0 << 6))
+ c88:	04057793          	andi	a5,a0,64
+ c8c:	eb91                	bnez	a5,ca0 <GetSysClock+0x24>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:97
+        return (32000000 / (rev & 0x1f));
+ c8e:	01f57793          	andi	a5,a0,31
+ c92:	01e85537          	lui	a0,0x1e85
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:101
+        return (480000000 / (rev & 0x1f));
+ c96:	80050513          	addi	a0,a0,-2048 # 1e84800 <_data_lma+0x1e838c8>
+ c9a:	02f54533          	div	a0,a0,a5
+ c9e:	8082                	ret
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:99
+    else if((rev & RB_CLK_SYS_MOD) == (1 << 6))
+ ca0:	0c057793          	andi	a5,a0,192
+ ca4:	04000713          	li	a4,64
+ ca8:	00e79763          	bne	a5,a4,cb6 <GetSysClock+0x3a>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:101
+        return (480000000 / (rev & 0x1f));
+ cac:	01f57793          	andi	a5,a0,31
+ cb0:	1c9c4537          	lui	a0,0x1c9c4
+ cb4:	b7cd                	j	c96 <GetSysClock+0x1a>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:105
+        return (32000);
+ cb6:	6521                	lui	a0,0x8
+ cb8:	d0050513          	addi	a0,a0,-768 # 7d00 <_data_lma+0x6dc8>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:107
+}
+ cbc:	8082                	ret
+
+00000cbe <UART0_BaudRateCfg>:
+UART0_BaudRateCfg():
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart0.c:43
+ * @param   baudrate    - 波特率
+ *
+ * @return  none
+ */
+void UART0_BaudRateCfg(uint32_t baudrate)
+{
+ cbe:	1141                	addi	sp,sp,-16
+ cc0:	c422                	sw	s0,8(sp)
+ cc2:	c606                	sw	ra,12(sp)
+ cc4:	842a                	mv	s0,a0
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart0.c:46
+    uint32_t x;
+
+    x = 10 * GetSysClock() / 8 / baudrate;
+ cc6:	3f5d                	jal	c7c <GetSysClock>
+ cc8:	4729                	li	a4,10
+ cca:	02e507b3          	mul	a5,a0,a4
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart0.c:49
+    x = (x + 5) / 10;
+    R16_UART0_DL = (uint16_t)x;
+}
+ cce:	40b2                	lw	ra,12(sp)
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart0.c:46
+    x = 10 * GetSysClock() / 8 / baudrate;
+ cd0:	838d                	srli	a5,a5,0x3
+ cd2:	0287d7b3          	divu	a5,a5,s0
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart0.c:49
+}
+ cd6:	4422                	lw	s0,8(sp)
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart0.c:47
+    x = (x + 5) / 10;
+ cd8:	0795                	addi	a5,a5,5
+ cda:	02e7d7b3          	divu	a5,a5,a4
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart0.c:48
+    R16_UART0_DL = (uint16_t)x;
+ cde:	40003737          	lui	a4,0x40003
+ ce2:	07c2                	slli	a5,a5,0x10
+ ce4:	83c1                	srli	a5,a5,0x10
+ ce6:	00f71623          	sh	a5,12(a4) # 4000300c <_eusrstack+0x1fffb00c>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart0.c:49
+}
+ cea:	0141                	addi	sp,sp,16
+ cec:	8082                	ret
+
+00000cee <UART0_DefInit>:
+UART0_DefInit():
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart0.c:26
+    UART0_BaudRateCfg(115200);
+ cee:	6571                	lui	a0,0x1c
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart0.c:25
+{
+ cf0:	1141                	addi	sp,sp,-16
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart0.c:26
+    UART0_BaudRateCfg(115200);
+ cf2:	20050513          	addi	a0,a0,512 # 1c200 <_data_lma+0x1b2c8>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart0.c:25
+{
+ cf6:	c606                	sw	ra,12(sp)
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart0.c:26
+    UART0_BaudRateCfg(115200);
+ cf8:	37d9                	jal	cbe <UART0_BaudRateCfg>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart0.c:27
+    R8_UART0_FCR = (2 << 6) | RB_FCR_TX_FIFO_CLR | RB_FCR_RX_FIFO_CLR | RB_FCR_FIFO_EN; // FIFO打开，触发点4字节
+ cfa:	400037b7          	lui	a5,0x40003
+ cfe:	f8700713          	li	a4,-121
+ d02:	00e78123          	sb	a4,2(a5) # 40003002 <_eusrstack+0x1fffb002>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart0.c:28
+    R8_UART0_LCR = RB_LCR_WORD_SZ;
+ d06:	470d                	li	a4,3
+ d08:	00e781a3          	sb	a4,3(a5)
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart0.c:29
+    R8_UART0_IER = RB_IER_TXD_EN;
+ d0c:	04000713          	li	a4,64
+ d10:	00e780a3          	sb	a4,1(a5)
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart0.c:30
+    R8_UART0_DIV = 1;
+ d14:	4705                	li	a4,1
+ d16:	00e78723          	sb	a4,14(a5)
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart0.c:31
+}
+ d1a:	40b2                	lw	ra,12(sp)
+ d1c:	0141                	addi	sp,sp,16
+ d1e:	8082                	ret
+
+00000d20 <UART0_ByteTrigCfg>:
+UART0_ByteTrigCfg():
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart0.c:62
+ *
+ * @return  none
+ */
+void UART0_ByteTrigCfg(UARTByteTRIGTypeDef b)
+{
+    R8_UART0_FCR = (R8_UART0_FCR & ~RB_FCR_FIFO_TRIG) | (b << 6);
+ d20:	40003737          	lui	a4,0x40003
+ d24:	00274783          	lbu	a5,2(a4) # 40003002 <_eusrstack+0x1fffb002>
+ d28:	051a                	slli	a0,a0,0x6
+ d2a:	03f7f793          	andi	a5,a5,63
+ d2e:	8fc9                	or	a5,a5,a0
+ d30:	0ff7f793          	andi	a5,a5,255
+ d34:	00f70123          	sb	a5,2(a4)
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart0.c:63
+}
+ d38:	8082                	ret
+
+00000d3a <UART0_INTCfg>:
+UART0_INTCfg():
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart0.c:83
+ */
+void UART0_INTCfg(FunctionalState s, uint8_t i)
+{
+    if(s)
+    {
+        R8_UART0_IER |= i;
+ d3a:	400037b7          	lui	a5,0x40003
+ d3e:	0017c703          	lbu	a4,1(a5) # 40003001 <_eusrstack+0x1fffb001>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart0.c:81
+    if(s)
+ d42:	c919                	beqz	a0,d58 <UART0_INTCfg+0x1e>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart0.c:83
+        R8_UART0_IER |= i;
+ d44:	8dd9                	or	a1,a1,a4
+ d46:	00b780a3          	sb	a1,1(a5)
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart0.c:84
+        R8_UART0_MCR |= RB_MCR_INT_OE;
+ d4a:	0007c703          	lbu	a4,0(a5)
+ d4e:	00876713          	ori	a4,a4,8
+ d52:	00e78023          	sb	a4,0(a5)
+ d56:	8082                	ret
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart0.c:88
+    }
+    else
+    {
+        R8_UART0_IER &= ~i;
+ d58:	fff5c593          	not	a1,a1
+ d5c:	8df9                	and	a1,a1,a4
+ d5e:	00b780a3          	sb	a1,1(a5)
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart0.c:90
+    }
+}
+ d62:	8082                	ret
+
+00000d64 <UART0_SendString>:
+UART0_SendString():
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart0.c:122
+{
+    uint16_t len = l;
+
+    while(len)
+    {
+        if(R8_UART0_TFC != UART_FIFO_SIZE)
+ d64:	400037b7          	lui	a5,0x40003
+ d68:	4721                	li	a4,8
+ d6a:	400036b7          	lui	a3,0x40003
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart0.c:120
+    while(len)
+ d6e:	e191                	bnez	a1,d72 <UART0_SendString+0xe>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart0.c:128
+        {
+            R8_UART0_THR = *buf++;
+            len--;
+        }
+    }
+}
+ d70:	8082                	ret
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart0.c:122
+        if(R8_UART0_TFC != UART_FIFO_SIZE)
+ d72:	00b7c603          	lbu	a2,11(a5) # 4000300b <_eusrstack+0x1fffb00b>
+ d76:	fec70ce3          	beq	a4,a2,d6e <UART0_SendString+0xa>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart0.c:124
+            R8_UART0_THR = *buf++;
+ d7a:	0505                	addi	a0,a0,1
+ d7c:	fff54603          	lbu	a2,-1(a0)
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart0.c:125
+            len--;
+ d80:	15fd                	addi	a1,a1,-1
+ d82:	05c2                	slli	a1,a1,0x10
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart0.c:124
+            R8_UART0_THR = *buf++;
+ d84:	00c68423          	sb	a2,8(a3) # 40003008 <_eusrstack+0x1fffb008>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart0.c:125
+            len--;
+ d88:	81c1                	srli	a1,a1,0x10
+ d8a:	b7d5                	j	d6e <UART0_SendString+0xa>
+
+00000d8c <UART1_BaudRateCfg>:
+UART1_BaudRateCfg():
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart1.c:43
+ * @param   baudrate    - 波特率
+ *
+ * @return  none
+ */
+void UART1_BaudRateCfg(uint32_t baudrate)
+{
+ d8c:	1141                	addi	sp,sp,-16
+ d8e:	c422                	sw	s0,8(sp)
+ d90:	c606                	sw	ra,12(sp)
+ d92:	842a                	mv	s0,a0
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart1.c:46
+    uint32_t x;
+
+    x = 10 * GetSysClock() / 8 / baudrate;
+ d94:	35e5                	jal	c7c <GetSysClock>
+ d96:	4729                	li	a4,10
+ d98:	02e507b3          	mul	a5,a0,a4
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart1.c:49
+    x = (x + 5) / 10;
+    R16_UART1_DL = (uint16_t)x;
+}
+ d9c:	40b2                	lw	ra,12(sp)
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart1.c:46
+    x = 10 * GetSysClock() / 8 / baudrate;
+ d9e:	838d                	srli	a5,a5,0x3
+ da0:	0287d7b3          	divu	a5,a5,s0
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart1.c:49
+}
+ da4:	4422                	lw	s0,8(sp)
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart1.c:47
+    x = (x + 5) / 10;
+ da6:	0795                	addi	a5,a5,5
+ da8:	02e7d7b3          	divu	a5,a5,a4
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart1.c:48
+    R16_UART1_DL = (uint16_t)x;
+ dac:	40003737          	lui	a4,0x40003
+ db0:	07c2                	slli	a5,a5,0x10
+ db2:	83c1                	srli	a5,a5,0x10
+ db4:	40f71623          	sh	a5,1036(a4) # 4000340c <_eusrstack+0x1fffb40c>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart1.c:49
+}
+ db8:	0141                	addi	sp,sp,16
+ dba:	8082                	ret
+
+00000dbc <UART1_DefInit>:
+UART1_DefInit():
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart1.c:26
+    UART1_BaudRateCfg(115200);
+ dbc:	6571                	lui	a0,0x1c
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart1.c:25
+{
+ dbe:	1141                	addi	sp,sp,-16
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart1.c:26
+    UART1_BaudRateCfg(115200);
+ dc0:	20050513          	addi	a0,a0,512 # 1c200 <_data_lma+0x1b2c8>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart1.c:25
+{
+ dc4:	c606                	sw	ra,12(sp)
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart1.c:26
+    UART1_BaudRateCfg(115200);
+ dc6:	37d9                	jal	d8c <UART1_BaudRateCfg>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart1.c:27
+    R8_UART1_FCR = (2 << 6) | RB_FCR_TX_FIFO_CLR | RB_FCR_RX_FIFO_CLR | RB_FCR_FIFO_EN; // FIFO打开，触发点4字节
+ dc8:	400037b7          	lui	a5,0x40003
+ dcc:	f8700713          	li	a4,-121
+ dd0:	40e78123          	sb	a4,1026(a5) # 40003402 <_eusrstack+0x1fffb402>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart1.c:28
+    R8_UART1_LCR = RB_LCR_WORD_SZ;
+ dd4:	470d                	li	a4,3
+ dd6:	40e781a3          	sb	a4,1027(a5)
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart1.c:29
+    R8_UART1_IER = RB_IER_TXD_EN;
+ dda:	04000713          	li	a4,64
+ dde:	40e780a3          	sb	a4,1025(a5)
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart1.c:30
+    R8_UART1_DIV = 1;
+ de2:	4705                	li	a4,1
+ de4:	40e78723          	sb	a4,1038(a5)
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart1.c:31
+}
+ de8:	40b2                	lw	ra,12(sp)
+ dea:	0141                	addi	sp,sp,16
+ dec:	8082                	ret
+
+00000dee <UART1_ByteTrigCfg>:
+UART1_ByteTrigCfg():
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart1.c:62
+ *
+ * @return  none
+ */
+void UART1_ByteTrigCfg(UARTByteTRIGTypeDef b)
+{
+    R8_UART1_FCR = (R8_UART1_FCR & ~RB_FCR_FIFO_TRIG) | (b << 6);
+ dee:	40003737          	lui	a4,0x40003
+ df2:	40274783          	lbu	a5,1026(a4) # 40003402 <_eusrstack+0x1fffb402>
+ df6:	051a                	slli	a0,a0,0x6
+ df8:	03f7f793          	andi	a5,a5,63
+ dfc:	8fc9                	or	a5,a5,a0
+ dfe:	0ff7f793          	andi	a5,a5,255
+ e02:	40f70123          	sb	a5,1026(a4)
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart1.c:63
+}
+ e06:	8082                	ret
+
+00000e08 <UART1_INTCfg>:
+UART1_INTCfg():
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart1.c:83
+ */
+void UART1_INTCfg(FunctionalState s, uint8_t i)
+{
+    if(s)
+    {
+        R8_UART1_IER |= i;
+ e08:	400037b7          	lui	a5,0x40003
+ e0c:	4017c703          	lbu	a4,1025(a5) # 40003401 <_eusrstack+0x1fffb401>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart1.c:81
+    if(s)
+ e10:	c919                	beqz	a0,e26 <UART1_INTCfg+0x1e>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart1.c:83
+        R8_UART1_IER |= i;
+ e12:	8dd9                	or	a1,a1,a4
+ e14:	40b780a3          	sb	a1,1025(a5)
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart1.c:84
+        R8_UART1_MCR |= RB_MCR_INT_OE;
+ e18:	4007c703          	lbu	a4,1024(a5)
+ e1c:	00876713          	ori	a4,a4,8
+ e20:	40e78023          	sb	a4,1024(a5)
+ e24:	8082                	ret
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart1.c:88
+    }
+    else
+    {
+        R8_UART1_IER &= ~i;
+ e26:	fff5c593          	not	a1,a1
+ e2a:	8df9                	and	a1,a1,a4
+ e2c:	40b780a3          	sb	a1,1025(a5)
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart1.c:90
+    }
+}
+ e30:	8082                	ret
+
+00000e32 <UART1_SendString>:
+UART1_SendString():
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart1.c:122
+{
+    uint16_t len = l;
+
+    while(len)
+    {
+        if(R8_UART1_TFC != UART_FIFO_SIZE)
+ e32:	400037b7          	lui	a5,0x40003
+ e36:	4721                	li	a4,8
+ e38:	400036b7          	lui	a3,0x40003
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart1.c:120
+    while(len)
+ e3c:	e191                	bnez	a1,e40 <UART1_SendString+0xe>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart1.c:128
+        {
+            R8_UART1_THR = *buf++;
+            len--;
+        }
+    }
+}
+ e3e:	8082                	ret
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart1.c:122
+        if(R8_UART1_TFC != UART_FIFO_SIZE)
+ e40:	40b7c603          	lbu	a2,1035(a5) # 4000340b <_eusrstack+0x1fffb40b>
+ e44:	fec70ce3          	beq	a4,a2,e3c <UART1_SendString+0xa>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart1.c:124
+            R8_UART1_THR = *buf++;
+ e48:	0505                	addi	a0,a0,1
+ e4a:	fff54603          	lbu	a2,-1(a0)
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart1.c:125
+            len--;
+ e4e:	15fd                	addi	a1,a1,-1
+ e50:	05c2                	slli	a1,a1,0x10
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart1.c:124
+            R8_UART1_THR = *buf++;
+ e52:	40c68423          	sb	a2,1032(a3) # 40003408 <_eusrstack+0x1fffb408>
+E:/chelou/CH573/EVTEVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart1.c:125
+            len--;
+ e56:	81c1                	srli	a1,a1,0x10
+ e58:	b7d5                	j	e3c <UART1_SendString+0xa>
+
+00000e5a <memcpy>:
+memcpy():
+ e5a:	00a5c7b3          	xor	a5,a1,a0
+ e5e:	8b8d                	andi	a5,a5,3
+ e60:	00c50733          	add	a4,a0,a2
+ e64:	e781                	bnez	a5,e6c <memcpy+0x12>
+ e66:	478d                	li	a5,3
+ e68:	00c7ee63          	bltu	a5,a2,e84 <memcpy+0x2a>
+ e6c:	87aa                	mv	a5,a0
+ e6e:	0ae57063          	bgeu	a0,a4,f0e <memcpy+0xb4>
+ e72:	0005c683          	lbu	a3,0(a1)
+ e76:	0785                	addi	a5,a5,1
+ e78:	0585                	addi	a1,a1,1
+ e7a:	fed78fa3          	sb	a3,-1(a5)
+ e7e:	fee7eae3          	bltu	a5,a4,e72 <memcpy+0x18>
+ e82:	8082                	ret
+ e84:	00357693          	andi	a3,a0,3
+ e88:	87aa                	mv	a5,a0
+ e8a:	ca91                	beqz	a3,e9e <memcpy+0x44>
+ e8c:	0005c683          	lbu	a3,0(a1)
+ e90:	0785                	addi	a5,a5,1
+ e92:	0585                	addi	a1,a1,1
+ e94:	fed78fa3          	sb	a3,-1(a5)
+ e98:	0037f693          	andi	a3,a5,3
+ e9c:	b7fd                	j	e8a <memcpy+0x30>
+ e9e:	ffc77693          	andi	a3,a4,-4
+ ea2:	fe068613          	addi	a2,a3,-32
+ ea6:	06c7f063          	bgeu	a5,a2,f06 <memcpy+0xac>
+ eaa:	0005a383          	lw	t2,0(a1)
+ eae:	0045a283          	lw	t0,4(a1)
+ eb2:	0085af83          	lw	t6,8(a1)
+ eb6:	00c5af03          	lw	t5,12(a1)
+ eba:	0105ae83          	lw	t4,16(a1)
+ ebe:	0145ae03          	lw	t3,20(a1)
+ ec2:	0185a303          	lw	t1,24(a1)
+ ec6:	01c5a883          	lw	a7,28(a1)
+ eca:	02458593          	addi	a1,a1,36
+ ece:	0077a023          	sw	t2,0(a5)
+ ed2:	ffc5a803          	lw	a6,-4(a1)
+ ed6:	0057a223          	sw	t0,4(a5)
+ eda:	01f7a423          	sw	t6,8(a5)
+ ede:	01e7a623          	sw	t5,12(a5)
+ ee2:	01d7a823          	sw	t4,16(a5)
+ ee6:	01c7aa23          	sw	t3,20(a5)
+ eea:	0067ac23          	sw	t1,24(a5)
+ eee:	0117ae23          	sw	a7,28(a5)
+ ef2:	02478793          	addi	a5,a5,36
+ ef6:	ff07ae23          	sw	a6,-4(a5)
+ efa:	b775                	j	ea6 <memcpy+0x4c>
+ efc:	4190                	lw	a2,0(a1)
+ efe:	0791                	addi	a5,a5,4
+ f00:	0591                	addi	a1,a1,4
+ f02:	fec7ae23          	sw	a2,-4(a5)
+ f06:	fed7ebe3          	bltu	a5,a3,efc <memcpy+0xa2>
+ f0a:	f6e7e4e3          	bltu	a5,a4,e72 <memcpy+0x18>
+ f0e:	8082                	ret
+ f10:	fc38                	fsw	fa4,120(s0)
+ f12:	ffff                	0xffff
+ f14:	fc60                	fsw	fs0,124(s0)
+ f16:	ffff                	0xffff
+ f18:	fc88                	fsw	fa0,56(s1)
+ f1a:	ffff                	0xffff
+ f1c:	fca0                	fsw	fs0,120(s1)
+ f1e:	ffff                	0xffff
+ f20:	fcba                	fsw	fa4,120(sp)
+ f22:	ffff                	0xffff
+ f24:	fcca                	fsw	fs2,120(sp)
+ f26:	ffff                	0xffff
+ f28:	fcf2                	fsw	ft8,120(sp)
+ f2a:	ffff                	0xffff
+ f2c:	fd1a                	fsw	ft6,184(sp)
+ f2e:	ffff                	0xffff
+ f30:	fd32                	fsw	fa2,184(sp)
+ f32:	ffff                	0xffff
+ f34:	fd4c                	fsw	fa1,60(a0)
+ f36:	ffff                	0xffff

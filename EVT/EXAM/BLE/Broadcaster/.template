@@ -1,0 +1,12 @@
+
+Vendor=WCH
+MCU=CH573F
+Mcu Type=CH57x
+Link=WCH-Link
+Address=0x00000000
+Target Path=obj\Broadcaster.hex
+Erase All=true
+Program=true
+Verify=false
+Reset=true
+CLKSpeed=1
