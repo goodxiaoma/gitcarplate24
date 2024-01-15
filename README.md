@@ -18,4 +18,4 @@ openmv与CH573进行数据传输
 若需要运行openmv只需运行main  
 
 ## CH573
-### 
+
